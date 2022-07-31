@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Stylesheet Reset-->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Survey form</title>
+</head>
+
+<body>
+    <h1 id="title">Training Evaluation Form</h1>
+    <p id="description">Thanking you for taking time to help us improve on our service delivery </p>
+    <div class="container">
+        <form id="survey-form">
+            <!--Personal Information-->
+            <section class="personal-data">
+                <fieldset>
+                    <label id="name-label">Name: <input id="name" type="text" name="name" placeholder="Enter your name"
+                            required /></label>
+                </fieldset>
+                <fieldset>
+                    <label id="email-label">Email: <input id="email" type="email" name="email"
+                            placeholder="Enter your email" required /></label>
+                </fieldset>
+                <fieldset>
+                    <label id="number-label">Age <span class="option">(optional):</span> <input id="number"
+                            type="number" name="age" min="13" max="120" placeholder="Age" /></label>
+                </fieldset>
+                <fieldset>
+                    <label>Which of these describes your current role best?
+                        <select name="job" id="dropdown">
+                            <option value="">(select current role)</option>
+                            <option value="1">Student</option>
+                            <option value="2">full-time</option>
+                            <option value="3">Part-time</option>
+                            <option value="4">Remote work</option>
+                            <option value="5">Others</option>
+                            <option value="6">Prefer not to say</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </section>
+
+            <!--Product recommendation Opinion-->
+            <section class="product-opinion">
+                <fieldset>
+                    <legend>Would you recommend any of our products to your friends?</legend>
+                    <div class="opinion-choice">
+                        <label><input type="radio" name="recommend" value="Yes" checked /> Yes</label>
+                        <label><input type="radio" name="recommend" value="No"> No</label>
+                        <label><input type="radio" name="recommend" value="Maybe"> Maybe</label>
+                    </div>
+                </fieldset>
+            </section>
+            <section class="product-opinion">
+                <fieldset>
+                    <label>What is the most important reason for choosing any our products?
+                        <select name="products" id="dropdown1">
+                            <option value="">(select your reason)</option>
+                            <Option value="1">Affordability</Option>
+                            <Option value="2">Excellent Quality</Option>
+                            <Option value="3">Aftersales support</Option>
+                            <Option value="4">Excellent Customer Services</Option>
+                        </select>
+                    </label>
+                </fieldset>
+            </section>
+            <section class="product-opinion">
+                <fieldset>
+                    <legend>What would you like us to improve on <span class="option">(check all that apply)</span>?
+                    </legend>
+                    <div class="opinion-choice">
+                        <div class="choices">
+                            <input id="delivery" type="checkbox" name="product-delivery" value="product-delivery"
+                                checked />
+                            <label for="product-delivery">Product Quality</label>
+                        </div>
+                        <div class="choices">
+                            <input id="variety" type="checkbox" name="product-variety" value="product-variety" />
+                            <label for="product-variety">Product Quantity</label>
+                        </div>
+                    </div>
+                </fieldset>
+            </section>
+
+            <legend>Comment:</legend>
+            <label>
+                <textarea type="text" name="comment" placeholder="Additional comment if any"></textarea>
+            </label>
+            </fieldset>
+            <div class="submit"><input id="submit" type="submit" value="Submit" /></div>
+        </form>
+    </div>
+</body>
+
+</html>

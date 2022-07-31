@@ -1,0 +1,154 @@
+/*Mobile first responsive desgin*/
+/* Unversal Styling for the navigation bar*/
+header {
+    padding: 1rem;
+    margin: 0;
+}
+
+/* Navigation bar */
+header nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+}
+
+nav #logo {
+    flex-basis: 23.5%;
+}
+
+nav .nabvar {
+    flex-basis: 74.5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Navigation bar buttons*/
+#search_btn, #menu_btn, #close_btn {
+    cursor: pointer;
+}
+
+img#search_btn, img#menu_btn, img#close_btn {
+    width: 1.5rem;
+    height: auto;
+    padding: auto 0.75rem;
+}
+/* navigation bar button hover and active effect*/
+#search_btn:hover, #menu_btn:hover, #close_btn:hover {
+    background-color: #948f8f;
+}
+
+#search_btn:active, #menu_btn:active, #close_btn:active {
+    background-color: #e4e4e4;
+}
+
+/* Close button default state for mobile*/
+#close_btn {
+    display: none;
+}
+ 
+/* search bar default state for mobile*/
+#search_bar {
+    display: none;
+    flex-basis: calc(100% - 4.0rem);
+}
+
+input#search {
+    width: 100%;
+    font-size: 1rem;
+    padding-block-start: 0.5rem;
+    padding-block-end: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+/* Secondary Navigation Bar for mobile and tablet view*/
+header #secondary_nav {
+    display: none;
+}
+
+header #secondary_nav ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+header #secondary_nav ul li {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-block: 0.25rem;
+    margin-block: 0.25rem;
+}
+
+header #secondary_nav ul li a {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    padding-block: 0.25rem;
+    color: black;
+    text-decoration: none;
+}
+
+header #secondary_nav ul li a:hover {
+    background-color: #948f8f;
+}
+
+header #secondary_nav ul li a:active {
+    background-color: #e4e4e4;
+}
+
+/*Slider section*/
+.slides {
+    position: relative;
+    max-width: 100%;
+    border: 2px solid red;
+}
+.slides img {
+    width: 100%;
+    max-height: 600px;
+}
+
+.slides .slide-arrow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 0 0.5rem;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slides .slide-arrow img {
+    width: 1.5rem;
+    height: auto;
+    padding: auto 0.75rem;
+    cursor: pointer;
+}
+
+.slides .slide-arrow img:hover {
+    background-color: #948f8f;
+}
+
+.slides .slide-arrow img:active {
+    background-color: #e4e4e4;
+}
+
+
+/* Nav bar for desktop and laptop view default state for mobile*/
+nav .desktop{
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+ 
+
+}
+    
+

@@ -1,0 +1,168 @@
+/*Universal reset*/
+:after,
+:before {
+    box-sizing: border-box;
+    background-color: inherit;
+    font-family: inherit;
+    color: inherit;
+    overflow-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+    outline: none;
+}
+
+/*modular Scale*/
+:root {
+    --ratio: 1.4;
+    --s-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
+    --s-4: clamp(0.41rem, 0.47rem + -0.31vw, 0.25rem);
+    --s-3: clamp(0.51rem, 0.57rem + -0.31vw, 0.35rem);
+    --s-2: clamp(0.64rem, 0.69rem + -0.27vw, 0.5rem);
+    --s-1: clamp(0.8rem, 0.84rem + -0.18vw, 0.71rem);
+    --s0: clamp(1rem, 1rem + 0vw, 1rem);
+    --s1: clamp(1.25rem, 1.19rem + 0.32vw, 1.41rem);
+    --s2: clamp(1.56rem, 1.39rem + 0.85vw, 2rem);
+    --s3: clamp(1.95rem, 1.61rem + 1.7vw, 2.83rem);
+    --s4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
+    --s5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
+    --measure: 65ch;
+    --line-height: var(--ratio);
+    --line-height-small: calc(0.8*var(--ratio));
+    --border-thin: var(--s-5);
+    --border-thick: var(--s-2);
+    line-height: var(--ratio);
+    font-size: calc(.333vw + 1em);
+}
+
+/*Universal styling*/
+body {
+    margin: 0;
+    padding: 0;
+}
+Img {
+    width: 100%;
+    height: auto;
+}
+
+/*creating a stack container*/
+.container {
+    padding: var(--s1);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.5;
+}
+
+
+/*creating a content wrapper to control the max-width of content*/
+.search {
+    display: block;
+    box-sizing: content-box;
+    margin-inline: auto;
+    max-inline-size: var(--measure);
+    color: #202124;
+}
+
+/* adding consistent spacing between adjacent elements*/
+.search>*+* {
+    margin-block-start: 1.5rem;
+}
+
+/*Sizing the logo in relation to the parent element*/
+img.search__img {
+    display: block;
+    margin-inline: auto;
+    max-inline-size: 50%;
+}
+
+/*Styling the input container*/
+.search__input {
+    display: block;
+    inline-size: 100%;
+    padding: 0;
+    border-width: var(--border-thin);
+    outline: var(--border-thin) solid transparent;
+    outline-offset: calc(var(--border-thin)*-1);
+    border-radius: 50%;
+}
+
+/*Styling the input field*/
+.seacrh__input__field {
+    display: block;
+    inline-size: 100%;
+    padding-inline: 1.5rem;
+    margin: 0;
+    border-width: 1px;
+    border-color: #dfe1e5;
+    border-radius: 1rem;
+    line-height: 2rem;
+}
+
+.seacrh__input__field:hover,
+.seacrh__input__field:focus {
+    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+    border-color: rgba(223, 225, 229, 0);
+    outline: none;
+}
+
+
+/*Styling the search button wrapper and language option wrapper*/
+.search__lang__opt,
+.search__button-wrap {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    font-size: var(--s-1);
+}
+
+/*Adding consistent spacing between adjacent element*/
+.search__button-wrap *+*, .search__lang__opt *+* {
+    margin-inline-start: var(--s-1);
+}
+
+/*Styling the the button*/
+.search__button {
+    font-size: var(--s-1);
+    padding-inline: 1em;
+    line-height: 2;
+    border: 1px solid #f8f9fa;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    cursor: pointer;
+}
+
+.search__button:hover, .search__button:focus {
+    box-shadow: 0 1px 3px rgb(32 33 36 / 28%);
+    border-color: rgba(223, 225, 229, 0);   
+}
+
+.search__button:active {
+    border-color:blue;   
+}
+
+/*Styling the language option wrapper*/
+.search__lang__opt__disc {
+    margin: 0;
+    flex-basis: content;
+    margin-inline-end: var(--s-1);
+
+}
+
+
+.search__lang_opt__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+
+.search__lang_opt__list a {
+    text-decoration: none;
+}

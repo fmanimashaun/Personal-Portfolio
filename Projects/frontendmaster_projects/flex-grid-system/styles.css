@@ -1,0 +1,117 @@
+
+/* default styling, no changes needed here */
+
+/* set the layout to border box model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+}
+
+/* set font family and background gradient */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(353deg, rgba(148, 210, 189, 1) 40%, rgba(61, 147, 151, 1) 100%);
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+/* caption styling  */
+figcaption {
+    background-color: #001219;
+    color: white;
+    padding: 1rem;
+}
+
+/* reduces the top margin on the h2, bottom on the p, and leaves a 0.5rem gap between the two */
+figcaption * {
+    margin: 0.5rem;
+}
+
+/* sets the background SVG for all divs, regardless of color  */
+figure>div {
+    background-image: url("endless-clouds.svg");
+    /* set height or nothing will display. Width is 100% by default */
+    min-height: 150px;
+}
+
+/* sets a specific background color for each div */
+.one {
+    background-color: #9b2226;
+}
+
+.two {
+    background-color: #bb3e03;
+}
+
+.three {
+    background-color: #ee9b00;
+}
+
+.four {
+    background-color: #005f73;
+}
+
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+}
+
+figure, .span1 {
+    flex-basis: 22%;
+}
+
+.span2, .span2-1 {
+    flex-basis: 48%
+}
+
+.span3 {
+    flex-basis: 74%;
+}
+
+.span4 {
+    flex-basis: 100%;
+}
+
+.order-1 {
+    order: 1;
+}
+
+.order-2 {
+    order: 2;
+}
+
+.order-3 {
+    order: 3;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    figure {
+        flex-basis: 48%;
+    }
+
+    .span3, .span3-1, .span2-1 {
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    figure {
+        flex-basis: 100%;
+    }
+}
+    
+    

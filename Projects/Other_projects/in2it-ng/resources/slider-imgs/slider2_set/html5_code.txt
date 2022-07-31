@@ -1,0 +1,16 @@
+<picture>
+                <source media="(max-width: 767px)" sizes="(max-width: 440px) 100vw, 440px" srcset="
+                resources/slider-imgs/slider2_set/Scan2BIM_chywhr_ar_1_1,c_fill,g_auto__c_scale,w_300.jpg 300w,
+                resources/slider-imgs/slider2_set/Scan2BIM_chywhr_ar_1_1,c_fill,g_auto__c_scale,w_407.jpg 407w,
+                resources/slider-imgs/slider2_set/Scan2BIM_chywhr_ar_1_1,c_fill,g_auto__c_scale,w_440.jpg 440w">
+                <source media="(min-width: 768px) and (max-width: 991px)" sizes="(max-width: 586px) 100vw, 586px"
+                    srcset="
+                    resources/slider-imgs/slider2_set/Scan2BIM_chywhr_ar_4_3,c_fill,g_auto__c_scale,w_586.jpg 586w">
+                <source media="(min-width: 992px) and (max-width: 1199px)" sizes="(max-width: 781px) 100vw, 781px"
+                    srcset="
+                    resources/slider-imgs/slider2_set/Scan2BIM_chywhr_ar_16_9,c_fill,g_auto__c_scale,w_781.jpg 781w">
+                <img sizes="(max-width: 781px) 100vw, 781px" srcset="
+                resources/slider-imgs/slider2_set/Scan2BIM_chywhr_ar_16_9,c_fill,g_auto__c_scale,w_781.jpg 781w"
+                    src="resources/slider-imgs/slider2_set/Scan2BIM_chywhr_ar_16_9,c_fill,g_auto__c_scale,w_781.jpg"
+                    alt="">
+            </picture>

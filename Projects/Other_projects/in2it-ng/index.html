@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | in2it-ng</title>
+    <link rel="shortcut icon" href="resources/images/favicon-plain.png" type="image/x-icon">
+    <!--Google fonts-->
+    <!--
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    -->
+    <!--Style reset-->
+    <link rel="stylesheet" type="text/css" href="resources/css/reset.css">
+    <!--user main CSS for the entire site styles-->
+    <link rel="stylesheet" type="text/css" href="resources/css/main.css">
+    <!--Page Styling-->
+    <link rel="stylesheet" type="text/css" href="resources/css/home.css">
+
+</head>
+
+<body>
+    <header>
+        <nav id="nav">
+            <div id="logo">
+                <a href="#">
+                    <img src="resources/images/in2it_logo.png" alt="in2itng logo click here for home">
+                </a>
+            </div>
+            <div class="nabvar">
+                <div id="search_bar">
+                    <input type="search" name="search" id="search" placeholder="Search">
+                </div>
+                <ul class="navbar-links desktop">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#">OUR OFFERS</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">OUR TEAM</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+                <div class="search-menu-icon">
+                    <img src="resources/images/search-icon.png" alt="search button" id="search_btn">
+                    <img src="resources/images/menu-icon.png" alt="menu button" id="menu_btn">
+                    <img src="resources/images/cancel-icon.png" alt="close button" id="close_btn">
+                </div>
+
+            </div>
+        </nav>
+        <div id="secondary_nav">
+            <ul class="navbar-links mobile">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#">OUR OFFERS</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">OUR TEAM</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class="slides">
+            <!--Using "https://www.responsivebreakpoints.com" service for responsive image layout.
+                Resolution range: 300 - 1920
+                size step: 25KB
+                maxmimum images: 4
+                Retina Resolution: enabled
+                Art-direction: desktop (width:100%, aspect ration:16:9), 
+                               Small laptop (width:100%, aspect ration:16:9), 
+                               Tablets (width:100%, aspect ration:4:3)
+                               Smartphones (width:100%, aspect ration:1:1) 
+                Path: resources/slider-imgs/slider1_set/
+            -->
+            <div class="slide-arrow">
+                <img src="resources/images/left-arrow-outlined.svg" alt="left arrow" id="left_arrow">
+                <img src="resources/images/right-arrow-outlined.svg" alt="right arrow" id="right_arrow">
+            </div>
+            <picture class="slider_img">
+                <source id="source1" media="(max-width: 767px)" sizes="(max-width: 440px) 100vw, 440px"
+                    srcset="resources/slider-imgs/slider1_set/digital_solution_d6clej_ar_1_1,c_fill,g_auto__c_scale,w_300.jpg 300w, resources/slider-imgs/slider1_set/digital_solution_d6clej_ar_1_1,c_fill,g_auto__c_scale,w_440.jpg 440w">
+                <source id="source2" media="(min-width: 768px) and (max-width: 991px)"
+                    sizes="(max-width: 586px) 100vw, 586px"
+                    srcset="resources/slider-imgs/slider1_set/digital_solution_d6clej_ar_4_3,c_fill,g_auto__c_scale,w_586.jpg 586w">
+                <source id="source3" media="(min-width: 992px) and (max-width: 1199px)"
+                    sizes="(max-width: 781px) 100vw, 781px"
+                    srcset="resources/slider-imgs/slider1_set/digital_solution_d6clej_ar_16_9,c_fill,g_auto__c_scale,w_781.jpg 781w">
+                <img id="img_source" sizes="(max-width: 781px) 100vw, 781px"
+                    srcset="resources/slider-imgs/slider1_set/digital_solution_d6clej_ar_16_9,c_fill,g_auto__c_scale,w_781.jpg 781w"
+                    src="resources/slider-imgs/slider1_set/digital_solution_d6clej_ar_16_9,c_fill,g_auto__c_scale,w_781.jpg"
+                    alt="">
+            </picture>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="resources/scripts/main.js"></script>
+</body>
+
+</html>

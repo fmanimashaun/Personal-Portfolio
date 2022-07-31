@@ -1,0 +1,90 @@
+*,
+:after,
+:before {
+    box-sizing: border-box;
+    background-color: inherit;
+    font-family: inherit;
+    color: inherit;
+    overflow-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    border: 0 solid
+}
+
+:root {
+    --ratio: 1.4;
+    --s-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
+    --s-4: clamp(0.41rem, 0.47rem + -0.31vw, 0.25rem);
+    --s-3: clamp(0.51rem, 0.57rem + -0.31vw, 0.35rem);
+    --s-2: clamp(0.64rem, 0.69rem + -0.27vw, 0.5rem);
+    --s-1: clamp(0.8rem, 0.84rem + -0.18vw, 0.71rem);
+    --s0: clamp(1rem, 1rem + 0vw, 1rem);
+    --s1: clamp(1.25rem, 1.19rem + 0.32vw, 1.41rem);
+    --s2: clamp(1.56rem, 1.39rem + 0.85vw, 2rem);
+    --s3: clamp(1.95rem, 1.61rem + 1.7vw, 2.83rem);
+    --s4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
+    --s5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
+    --measure: 65ch;
+    --line-height: var(--ratio);
+    --line-height-small: calc(0.8*var(--ratio));
+    --border-thin: var(--s-5);
+    --border-thick: var(--s-2);
+    line-height: var(--ratio);
+    font-size: calc(.333vw + 1em);
+}
+
+.container {
+    padding: var(--s1);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    line-height: 1.5;
+}
+
+.container>h1 {
+    text-align: center;
+    font-size: var(--s3);
+}
+
+.container>h1+* {
+    margin-top: var(--s2);
+}
+
+.stack-container {
+    display: block;
+    margin-inline: 0;
+    max-width: none;
+    overflow: hidden;
+    border-width: var(--border-thin);
+    padding: var(--s1);
+    background-color: black;
+}
+
+.stack-wrap {
+    display: block;
+    box-sizing: content-box;
+    margin-inline: auto;
+    max-inline-size: var(--measure);
+}
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.stack * + * {
+    margin-block-start: 1.5rem;
+  }
+
+.stack-item, .stack-item-child {
+    display: block;
+    padding: var(--s1);
+    border-width: var(--border-thin);
+    outline: var(--border-thin) solid #FFFFFF;
+    outline-offset: calc(var(--border-thin)*-1);
+    border-color: #FFFFFF;
+}
+
+
