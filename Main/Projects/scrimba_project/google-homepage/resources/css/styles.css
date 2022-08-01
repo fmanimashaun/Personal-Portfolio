@@ -99,8 +99,13 @@ body {
 }
 
 .header__profile_icon {
-    max-width: 2rem;
-    max-height: 2rem;
+    max-width: 1.5rem;
+    max-height: 1.5rem;
+    padding: 2px;
     border-radius: 50%;
+}
+
+.header__profile_icon:hover {
+    background: #dfe1e5;
 }
 
