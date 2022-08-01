@@ -37,132 +37,70 @@
 
 /*Universal styling*/
 body {
+    max-width: 100vw;
     margin: 0;
     padding: 0;
-}
-Img {
-    width: 100%;
-    height: auto;
 }
 
 /*creating a stack container*/
 .container {
-    padding: var(--s1);
+    max-width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     line-height: 1.5;
 }
 
-
-/*creating a content wrapper to control the max-width of content*/
-.search {
-    display: block;
-    box-sizing: content-box;
-    margin-inline: auto;
-    max-inline-size: var(--measure);
-    color: #202124;
+/*Set default max-width for header, main and footer element*/
+.container > * {
+    max-width: 100%;
 }
 
-/* adding consistent spacing between adjacent elements*/
-.search>*+* {
-    margin-block-start: 1.5rem;
+/*Styling the header*/
+.header__container {
+    padding: var(--s-1);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: var(--s-1);
 }
 
-/*Sizing the logo in relation to the parent element*/
-img.search__img {
-    display: block;
-    margin-inline: auto;
-    max-inline-size: 50%;
+/*Setting all direct childs of the headeer to be display flex*/
+.header__container > * {
+    display: flex;
+
 }
 
-/*Styling the input container*/
-.search__input {
-    display: block;
-    inline-size: 100%;
-    padding: 0;
-    border-width: var(--border-thin);
-    outline: var(--border-thin) solid transparent;
-    outline-offset: calc(var(--border-thin)*-1);
+/*Applying a consistent spacing between children and nested children of header*/
+.header__container * + * {
+    margin-left: var(--s-1);
+}
+
+/*Styling the anchor text of the header*/
+.header__text__wrap a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.header__text__wrap a:hover {
+    text-decoration: underline;
+}
+
+/*Styling the menu icon and the profile icon of the header*/
+.header__menu {
+    padding-inline: calc((2rem - 24px)/2);
     border-radius: 50%;
 }
 
-/*Styling the input field*/
-.seacrh__input__field {
-    display: block;
-    inline-size: 100%;
-    padding-inline: 1.5rem;
-    margin: 0;
-    border-width: 1px;
-    border-color: #dfe1e5;
-    border-radius: 1rem;
-    line-height: 2rem;
+.header__menu:hover {
+    background: #dfe1e5;
 }
 
-.seacrh__input__field:hover,
-.seacrh__input__field:focus {
-    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
-    border-color: rgba(223, 225, 229, 0);
-    outline: none;
+.header__profile_icon {
+    max-width: 2rem;
+    max-height: 2rem;
+    border-radius: 50%;
 }
 
-
-/*Styling the search button wrapper and language option wrapper*/
-.search__lang__opt,
-.search__button-wrap {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    font-size: var(--s-1);
-}
-
-/*Adding consistent spacing between adjacent element*/
-.search__button-wrap *+*, .search__lang__opt *+* {
-    margin-inline-start: var(--s-1);
-}
-
-/*Styling the the button*/
-.search__button {
-    font-size: var(--s-1);
-    padding-inline: 1em;
-    line-height: 2;
-    border: 1px solid #f8f9fa;
-    background-color: #f8f9fa;
-    border-radius: 4px;
-    color: #3c4043;
-    cursor: pointer;
-}
-
-.search__button:hover, .search__button:focus {
-    box-shadow: 0 1px 3px rgb(32 33 36 / 28%);
-    border-color: rgba(223, 225, 229, 0);   
-}
-
-.search__button:active {
-    border-color:blue;   
-}
-
-/*Styling the language option wrapper*/
-.search__lang__opt__disc {
-    margin: 0;
-    flex-basis: content;
-    margin-inline-end: var(--s-1);
-
-}
-
-
-.search__lang_opt__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
-
-
-.search__lang_opt__list a {
-    text-decoration: none;
-}
