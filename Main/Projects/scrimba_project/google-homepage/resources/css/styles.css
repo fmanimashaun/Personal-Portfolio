@@ -176,6 +176,12 @@ footer > * {
     text-decoration: underline;
 }
 
+
+.footer__text .footer__text__right *:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 @media only screen and (min-width: 768px) {
 
     .footer__text, .footer__text > * {
