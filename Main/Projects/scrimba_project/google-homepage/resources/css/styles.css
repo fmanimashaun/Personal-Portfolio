@@ -109,3 +109,47 @@ body {
     background: #dfe1e5;
 }
 
+
+footer {
+    background: #f2f2f2;
+    padding-inline: 1.5rem;
+    color: #70757a;
+    font-size: var(--s-1);
+}
+
+footer > * {
+    padding-block: var(--s-2);
+}
+
+.location {
+    border-block-end: 1px solid #dadce0;
+}
+
+.location p {
+    margin: 0;
+}
+.footer__text * {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.footer__text, .footer__text > * {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__text ul > * + * {
+    margin-inline-start: var(--s-2);
+}
+
+.footer__text a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer__text a:hover {
+    text-decoration: underline;
+}
+
