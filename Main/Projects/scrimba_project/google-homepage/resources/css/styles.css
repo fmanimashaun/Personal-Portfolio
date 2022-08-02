@@ -53,7 +53,7 @@ body {
 }
 
 /*Set default max-width for header, main and footer element*/
-.container > * {
+.container>* {
     max-width: 100%;
 }
 
@@ -64,16 +64,17 @@ body {
     align-items: center;
     justify-content: flex-end;
     font-size: var(--s-2);
+    color: rgba(0, 0, 0, .87);
 }
 
 /*Setting all direct childs of the headeer to be display flex*/
-.header__container > * {
+.header__container>* {
     display: flex;
 
 }
 
 /*Applying a consistent spacing between children and nested children of header*/
-.header__container * + * {
+.header__container *+* {
     margin-left: var(--s-1);
 }
 
@@ -110,13 +111,121 @@ body {
 }
 
 
-footer {
+/*Main content*/
+.search {
+    max-width: var(--measure);
+    margin-inline: auto;
+}
+
+/*styling all elements within the element with class="search" */
+.search * {
+    margin-block: 0;
+}
+
+/*styling only the direct child the element with class="search" */
+.search > * {
+    margin-inline: auto;
+}
+
+/*styling only the direct child that has a sibling before it in the html structure the element with class="search" */
+.search > * + * {
+    margin-block-end: var(--s1);
+}
+
+.search .search__logo {
+    width: 50%;
+}
+
+.search__logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.search__field {
+    display: flex;
+    flex-direction: column;
+}
+
+/*styling all elements within the element with class="search__field" */
+.search__field * {
+    display: block;
+}
+
+/*styling only the direct child that has a sibling before it in the html structure the element with class="search__field" */
+.search__field > * + * {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    column-gap: var(--s-2);
+}
+
+.search__input__field {
+    line-height: var(--s0);
+    padding: var(--s-3) var(--s1);
+    border: 1px solid #dfe1e5;
+    border-radius: var(--s0);
+    margin: var(--s1) 1.5rem;
+}
+
+.search__input__field:hover,
+.search__input__field:focus {
+    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+    border-color: rgba(223, 225, 229, 0);
+    outline: none;
+}
+
+/*styling the search button*/
+.btn {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    color: #3c4043;
+    padding: var(--s-4) 1rem;
+    border-radius: var(--s-5);
+    font-size: var(--s-2);
+}
+
+.btn:hover, .btn:focus {
+    box-shadow: 0 1px 3px rgb(32 33 36 / 28%);
+    border-color: rgba(223, 225, 229, 0);   
+}
+
+.search__lang__opt {
+    font-size: small;
+}
+
+/*styling all elements within the element with class="search__lang__opt " */
+.search__lang__opt * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/*styling only the direct child the element with class="search__lang__opt" */
+.search__lang__opt > * {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+/*styling only the direct child of ul element that has a sibling before it in the html structure the element within the element with  class="search__lang__opt" */
+.search__lang__opt ul > * + * {
+    margin-inline-start: var(--s-2);
+}
+
+.search__lang__opt ul > *:hover {
+    text-decoration: underline;
+}
+
+
+.footer__container {
     background: #f2f2f2;
     color: #70757a;
     font-size: var(--s-2);
 }
 
-footer > * {
+.footer__container>* {
     padding: var(--s-2) 1.5rem;
 }
 
@@ -127,6 +236,7 @@ footer > * {
 .location p {
     margin: 0;
 }
+
 .footer__text * {
     list-style: none;
     margin: 0;
@@ -134,13 +244,14 @@ footer > * {
 }
 
 
-.footer__text, .footer__text > * {
+.footer__text,
+.footer__text>* {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
 }
 
-.footer__text > * {
+.footer__text>* {
     flex-basis: 100%;
 }
 
@@ -154,15 +265,16 @@ footer > * {
 }
 
 
-.footer__text__left,  .footer__text__right {
+.footer__text__left,
+.footer__text__right {
     order: 2;
 }
 
-.footer__text ul > * + * {
+.footer__text ul>*+* {
     margin-inline-start: var(--s-2);
 }
 
-.footer__text .footer__text__center > * + * {
+.footer__text .footer__text__center>*+* {
     margin-inline-start: var(--s-5);
 }
 
@@ -184,9 +296,21 @@ footer > * {
 
 @media only screen and (min-width: 768px) {
 
-    .footer__text, .footer__text > * {
+    .search__lang__opt {
+        display: flex;
+        justify-content: center;
+    }
+
+    .search__lang__opt>*+* {
+        margin-inline-start: var(--s-2);
+    }
+
+
+    .footer__text,
+    .footer__text>* {
         justify-content: space-between;
     }
+
     .footer__text__center {
         flex-basis: auto;
         order: 2;
@@ -203,4 +327,3 @@ footer > * {
         order: 3;
     }
 }
-
