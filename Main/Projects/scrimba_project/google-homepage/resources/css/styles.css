@@ -63,7 +63,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    font-size: var(--s-1);
+    font-size: var(--s-2);
 }
 
 /*Setting all direct childs of the headeer to be display flex*/
@@ -90,7 +90,7 @@ body {
 
 /*Styling the menu icon and the profile icon of the header*/
 .header__menu {
-    padding-inline: calc((2rem - 24px)/2);
+    padding-inline: calc((32.7833px - 24px)/2);
     border-radius: 50%;
 }
 
@@ -112,13 +112,12 @@ body {
 
 footer {
     background: #f2f2f2;
-    padding-inline: 1.5rem;
     color: #70757a;
-    font-size: var(--s-1);
+    font-size: var(--s-2);
 }
 
 footer > * {
-    padding-block: var(--s-2);
+    padding: var(--s-2) 1.5rem;
 }
 
 .location {
@@ -137,12 +136,36 @@ footer > * {
 
 .footer__text, .footer__text > * {
     display: flex;
-    justify-content: space-between;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.footer__text > * {
+    flex-basis: 100%;
+}
+
+.footer__text__center {
+    order: 1;
+}
+
+.footer__text__center img {
+    max-width: var(--s-2);
+    height: auto;
+}
+
+
+.footer__text__left,  .footer__text__right {
+    order: 2;
 }
 
 .footer__text ul > * + * {
     margin-inline-start: var(--s-2);
 }
+
+.footer__text .footer__text__center > * + * {
+    margin-inline-start: var(--s-5);
+}
+
 
 .footer__text a {
     color: inherit;
@@ -151,5 +174,27 @@ footer > * {
 
 .footer__text a:hover {
     text-decoration: underline;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .footer__text, .footer__text > * {
+        justify-content: space-between;
+    }
+    .footer__text__center {
+        flex-basis: auto;
+        order: 2;
+        justify-content: center;
+    }
+
+    .footer__text__left {
+        flex-basis: auto;
+        order: 1;
+    }
+
+    .footer__text__right {
+        flex-basis: auto;
+        order: 3;
+    }
 }
 
