@@ -168,7 +168,7 @@ body {
     position: relative;
     width: 100%;
     line-height: var(--s0);
-    padding: var(--s-3) var(--s1);
+    padding: var(--s-3) var(--s2);
     border: 1px solid #dfe1e5;
     border-radius: var(--s0);
     background: transparent;
