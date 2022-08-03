@@ -159,16 +159,19 @@ body {
     flex-flow: row wrap;
     justify-content: center;
     column-gap: var(--s-2);
+    margin-block-start: var(--s1);
 }
 
 
 
 .search__input__field {
+    position: relative;
     width: 100%;
     line-height: var(--s0);
     padding: var(--s-3) var(--s1);
     border: 1px solid #dfe1e5;
     border-radius: var(--s0);
+    z-index: 100;
 }
 
 .search__input__field:hover,
@@ -182,6 +185,8 @@ body {
     width: 100%;
     position: relative;
 }
+
+
 
 
 .search__input__field__icons {
