@@ -171,6 +171,7 @@ body {
     padding: var(--s-3) var(--s1);
     border: 1px solid #dfe1e5;
     border-radius: var(--s0);
+    background: transparent;
     z-index: 100;
 }
 
