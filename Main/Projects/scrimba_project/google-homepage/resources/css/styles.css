@@ -183,7 +183,10 @@ body {
     position: relative;
 }
 
+
 .search__input__field__icons {
+    box-sizing: border-box;
+    padding: var(--s-1);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -196,7 +199,7 @@ body {
 .search__input__field__icons img {
     display: block;
     width:auto;
-    height: var(--s1);
+    height: var(--s0);
 }
 /*styling the search button*/
 .btn {
