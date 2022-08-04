@@ -53,7 +53,7 @@ body {
     line-height: 1.5;
 }
 
-/*Set default max-width for header, main and footer element*/
+/*Set default max-width for all first child of the container class*/
 .container>* {
     max-width: 100%;
 }
