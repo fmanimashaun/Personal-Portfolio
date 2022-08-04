@@ -1,6 +1,7 @@
 /*Universal reset*/
-:after,
-:before {
+*,
+*:after,
+*:before {
     box-sizing: border-box;
     background-color: inherit;
     font-family: inherit;
