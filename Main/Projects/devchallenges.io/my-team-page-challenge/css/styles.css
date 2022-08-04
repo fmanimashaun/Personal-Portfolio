@@ -1,3 +1,38 @@
+/*import fonts*/
+
+/*PT Serif font*/
+@font-face {
+    font-family: 'PT Serif';
+    src: url("/font/PT_Serif/PTSerif-Regular.ttf") format('TrueType');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    src: url("/font/PT_Serif/PTSerif-Bold.ttf") format("TrueType");
+    font-weight: 700;
+}
+
+/*Poppins font*/
+@font-face {
+    font-family: 'Poppins';
+    src: url("/font/Poppins/Poppins-Regular.ttf") format("TrueType");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url("/font/Poppins/Poppins-SemiBold.ttf") format("TrueType");
+    font-weight: 600;
+}
+
+/*Montserrat font*/
+@font-face {
+    font-family: 'Poppins';
+    src: url("/font/Montserrat/Montserrat-VariableFont_wght.ttf") format("TrueType");
+    font-weight: 500;
+}
+
 /*Universal reset*/
 *,
 *:after,
@@ -34,6 +69,14 @@
     --border-thick: var(--s-2);
     line-height: var(--ratio);
     font-size: calc(.333vw + 1em);
+    --ff-primary: 'PT Serif', serif;
+    --ff-secondary: 'Poppins', sans-serif;
+    --ff-tertiary: 'Montserrat', sans-serif;
+    --fw-primary: 700;
+    --fw-secondary: 600;
+    --fw-tertiary: 400;
+    --fs-primary: var(--s3);
+    --fs-secondary: var(--s0);
 }
 
 /*Universal styling*/
@@ -45,15 +88,140 @@ body {
 
 /*creating a stack container*/
 .container {
-    max-width: 100%;
+    max-width: 90%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     line-height: 1.5;
+    margin-block-start: 4.12rem;
+    margin-block-end: var(--s1);
+    margin-inline: auto;
 }
 
 /*Set default max-width for all first child of the container class*/
 .container>* {
     max-width: 100%;
+}
+
+header * {
+    margin: 0;
+    padding: 0;
+}
+
+header>*+* {
+    margin-block-start: 2rem;
+}
+
+.header__logo {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-primary);
+    font-size: var(--fs-primary);
+    letter-spacing: -0.045em;
+}
+
+.header__title>*+* {
+    margin-block-start: var(--s-3);
+}
+
+.header__title {
+    width: min(19.6rem, 439px);
+}
+
+.header__subtitle {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-secondary);
+    font-weight: var(--fw-secondary);
+    text-transform: uppercase;
+}
+
+
+.header__subtitle__content {
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-tertiary);
+    font-size: var(--s-1);
+}
+
+main>* {
+    margin-block-start: var(--s5);
+    margin-block-end: 7.776rem;
+}
+
+.team__members {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    column-gap: var(--s2);
+}
+
+.member {
+    flex-basis: calc(50% - var(--s2));
+    display: flex;
+}
+
+.member__content figcaption {
+    font-size: var(--s-1);
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-secondary);
+}
+
+.member__title {
+    writing-mode: vertical-lr;
+    text-transform: uppercase;
+    font-size: var(--s-3);
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-tertiary);
+}
+
+.member.alt__1 {
+    padding-block-start: var(--s4);
+}
+
+.member img {
+    width: 100%;
+    height: auto;
+}
+
+.foot__note {
+    font-family: var(--ff-tertiary);
+    text-align: center;
+    font-size: var(--s-1);
+    color: #A9A9A9;
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 80%;
+    }
+
+    .team__members {
+        justify-content: space-around;
+    }
+
+    .member {
+        flex-basis: calc(33.33% - (2*var(--s2)));
+        display: flex;
+    }
+
+    .member.alt__1 {
+        padding-block-start: 0;
+    }
+
+    .member.alt__2 {
+        padding-block-start: var(--s4);
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header>*+* {
+
+        margin-block-start: 0;
+
+    }
 }
