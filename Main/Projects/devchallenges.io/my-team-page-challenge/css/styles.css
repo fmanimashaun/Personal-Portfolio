@@ -3,33 +3,33 @@
 /*PT Serif font*/
 @font-face {
     font-family: 'PT Serif';
-    src: url("/font/PT_Serif/PTSerif-Regular.ttf") format('TrueType');
+    src: url("../font/PT_Serif/PTSerif-Regular.ttf") format('TrueType');
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'PT Serif';
-    src: url("/font/PT_Serif/PTSerif-Bold.ttf") format("TrueType");
+    src: url("../font/PT_Serif/PTSerif-Bold.ttf") format("TrueType");
     font-weight: 700;
 }
 
 /*Poppins font*/
 @font-face {
     font-family: 'Poppins';
-    src: url("/font/Poppins/Poppins-Regular.ttf") format("TrueType");
+    src: url("../font/Poppins/Poppins-Regular.ttf") format("TrueType");
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url("/font/Poppins/Poppins-SemiBold.ttf") format("TrueType");
+    src: url("../font/Poppins/Poppins-SemiBold.ttf") format("TrueType");
     font-weight: 600;
 }
 
 /*Montserrat font*/
 @font-face {
     font-family: 'Poppins';
-    src: url("/font/Montserrat/Montserrat-VariableFont_wght.ttf") format("TrueType");
+    src: url("../font/Montserrat/Montserrat-VariableFont_wght.ttf") format("TrueType");
     font-weight: 500;
 }
 
