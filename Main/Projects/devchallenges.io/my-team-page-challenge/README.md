@@ -27,7 +27,7 @@
 ## Table of Contents
 
 - [Overview](#overview)
-- [Built With](#built-with)
+   - [Built With](#built-with)
 - [Features](#features)
 - [Contact](#contact)
 - [Acknowledgements](#acknowledgements)
@@ -36,7 +36,7 @@
 
 ## Overview
 
-![screenshot](devchallenges.io/my-team-page-challenge/img/screenshot.png)
+![screenshot](final-solution.png)
 
 Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
