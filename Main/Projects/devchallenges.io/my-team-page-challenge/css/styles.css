@@ -75,7 +75,7 @@
     --fw-primary: 700;
     --fw-secondary: 600;
     --fw-tertiary: 400;
-    --fs-primary: var(--s3);
+    --fs-primary: var(--s2);
     --fs-secondary: var(--s0);
 }
 
@@ -194,6 +194,11 @@ main>* {
         max-width: 80%;
     }
 
+
+    .header__subtitle__content {
+        font-size: var(--fs-secondary);
+    }
+
     .team__members {
         justify-content: space-around;
     }
@@ -216,7 +221,8 @@ main>* {
 
     header {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
+        column-gap: 14.931vw;
     }
 
     header>*+* {
