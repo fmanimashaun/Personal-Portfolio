@@ -40,7 +40,7 @@
 
 This challenge was undertaken to further strengthen my understanding of basic HTML and CSS with consideration for responsive design.
 
-- The live demo can be see on [Netlify](https://404-not-found-fm.netlify.app/)
+- The live demo can be see [here](https://github.com/fmanimashaun/Personal-Portfolio/tree/main/Main/Projects/devchallenges.io/404-not-found-challenge)
 - So far, I believe can say I am getting good with reading UI/UX design on figma and implementing the design using HTML/CSS
 - WI feel there is still alot to learn and understand with respect to layout
 
