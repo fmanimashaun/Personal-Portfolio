@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">{Your project name}</h1>
+<h1 align="center">404 Not Found Challenge</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://404-not-found-fm.netlify.app/">
+    <a href="https://fmanimashaun.com/projects/devchallenges.io/404-not-found-challenge/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/fmanimashaun/devchallenges.io">
+    <a href="https://github.com/fmanimashaun/Personal-Portfolio/tree/main/Main/Projects/devchallenges.io/404-not-found-challenge">
       Solution
     </a>
     <span> | </span>
@@ -38,20 +38,18 @@
 
 ![screenshot](final-solution.png)
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
+This challenge was undertaken to further strengthen my understanding of basic HTML and CSS with consideration for responsive design.
 
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+- The live demo can be seen [here](https://github.com/fmanimashaun/Personal-Portfolio/tree/main/Main/Projects/devchallenges.io/404-not-found-challenge)
+- So far, I believe can say I am getting good with reading UI/UX design on Figma and implementing the design using HTML/CSS
+- WI feel there is still a lot to learn and understand with respect to layout
 
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
-- [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 ## Features
 
@@ -63,13 +61,10 @@ This application/site was created as a submission to a [DevChallenges](https://d
 ## Acknowledgements
 
 <!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For exmpale -->
-
-- [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
-- [Node.js](https://nodejs.org/)
 - [Marked - a markdown parser](https://github.com/chjj/marked)
 
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+- Website [LinkedIn profile](https://www.linkedin.com/in/fmanimashaun/)
+- GitHub [@fmanimashaun](https://{github.com/your-usermame})
+- Twitter [@fmanimashaun](https://twitter.com/fmanimashaun)
