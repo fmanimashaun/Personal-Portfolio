@@ -221,7 +221,7 @@ main>* {
 
     header {
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-around;
         column-gap: 14.931vw;
     }
 
