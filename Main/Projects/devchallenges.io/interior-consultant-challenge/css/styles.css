@@ -1,7 +1,7 @@
 /*import fonts*/
 /*Crimson Pro font*/
 @font-face {
-    font-family:'Crimson Pro';
+    font-family: 'Crimson Pro';
     src: url("/fonts/Crimson_Pro/CrimsonPro-VariableFont_wght.ttf") format('TrueType');
 }
 
@@ -69,22 +69,42 @@ body {
     max-width: 100vw;
     margin: 0;
     padding: 0;
+    background: #181719;
+    color: #FFFFFF;
 }
 
 /*creating a stack container*/
 .container {
-    max-width: 90%;
+    max-width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     line-height: 1.5;
-    margin-block-start: 4.12rem;
-    margin-block-end: var(--s1);
-    margin-inline: auto;
+    font-size: 1rem;
 }
 
 /*Set default max-width for all first child of the container class*/
 .container>* {
     max-width: 100%;
+    border: 1px solid white;
 }
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header * {
+    display: block;
+    flex-basis: content;
+    border: 1px solid white;
+}
+
+.nav__menu img {
+    width: 38px;
+    height: auto;
+}
+
