@@ -70,7 +70,7 @@
     --line-height: var(--ratio);
     --line-height-small: calc(0.8*var(--ratio));
     line-height: var(--ratio);
-    font-size: var(--step-0);
+    font-size: calc(.333vw + 1em);
     --ff-primary: 'Crimson Pro', serif;
     --ff-secondary: 'Lora', serif;
     --ff-tertiary: 'Montserrat', sans-serif;
@@ -105,7 +105,6 @@ body {
 /*Set default max-width for all first child of the container class*/
 .container>* {
     max-width: 100%;
-    border: 1px solid white;
 }
 
 header {
@@ -113,15 +112,38 @@ header {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    padding: 1.25rem 0.75rem;
 }
 
 header * {
     display: block;
     flex-basis: content;
-    border: 1px solid white;
+}
+
+.logo {
+    font-size: 0.875rem;
+    padding: 0.5em;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    border: 1px solid #FFFFFF;
 }
 
 .nav__menu img {
     width: 38px;
+    height: auto;
+}
+
+main {
+    padding-inline: 0.75rem;
+}
+
+.feacture__project {
+    position: relative;
+}
+
+.feature__project img {
+    display: block;
+    width: 100%;
     height: auto;
 }
