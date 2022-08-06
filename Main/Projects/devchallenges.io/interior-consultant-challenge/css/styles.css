@@ -32,45 +32,65 @@
     outline: none;
 }
 
-/*modular Scale*/
+/*modular Scale for fonts*/
 :root {
     --ratio: 1.5;
-    --step--2: clamp(0.61rem, calc(0.48rem + 0.53vw), 0.96rem); /*9.72-15.36*/
-    --step--1: clamp(0.73rem, calc(0.56rem + 0.71vw), 1.20rem); /*11.67-19.20*/
-    --step-0: clamp(0.88rem, calc(0.65rem + 0.94vw), 1.50rem); /*14-24*/
-    --step-1: clamp(1.05rem, calc(0.76rem + 1.24vw), 1.88rem); /*16.80-30.00*/
-    --step-2: clamp(1.26rem, calc(0.88rem + 1.63vw), 2.34rem); /*20.16-37.50*/
-    --step-3: clamp(1.51rem, calc(1.01rem + 2.13vw), 2.93rem); /*24.19-46.88*/
-    --step-4: clamp(1.81rem, calc(1.16rem + 2.78vw), 3.66rem); /*29.03-58.59*/
-    --step-5: clamp(2.18rem, calc(1.33rem + 3.61vw), 4.58rem); /*34.84-73.24*/
-    --space-3xs: clamp(0.25rem, calc(0.21rem + 0.19vw), 0.38rem); /*4-12*/
-    --space-2xs: clamp(0.44rem, calc(0.33rem + 0.47vw), 0.75rem); /*7-18*/
-    --space-xs: clamp(0.69rem, calc(0.53rem + 0.66vw), 1.13rem); /*11-24*/
-    --space-s: clamp(0.88rem, calc(0.65rem + 0.94vw), 1.50rem); /*14-36*/
-    --space-m: clamp(1.31rem, calc(0.98rem + 1.41vw), 2.25rem); /*21-48*/
-    --space-l: clamp(1.75rem, calc(1.31rem + 1.88vw), 3.00rem); /*28-72*/
-    --space-xl: clamp(2.63rem, calc(1.96rem + 2.82vw), 4.50rem); /*42-96*/
-    --space-2xl: clamp(3.50rem, calc(2.62rem + 3.76vw), 6.00rem); /*56-96*/
-    --space-3xl: clamp(5.25rem, calc(3.93rem + 5.63vw), 9.00rem); /*84-144*/
+    /*Modular scale*/
+    /*10px to 12px*/
+    --step--3: clamp(0.63rem, calc(0.58rem + 0.19vw), 0.75rem);
+    /*12px to 14px*/
+    --step--2: clamp(0.75rem, calc(0.71rem + 0.19vw), 0.88rem);
+    /*14px to 18px*/
+    --step--1: clamp(0.88rem, calc(0.79rem + 0.38vw), 1.13rem);
+    /*14px to 24px*/
+    --step-0: clamp(0.88rem, calc(0.65rem + 0.94vw), 1.50rem);
+    /*18px to 24px*/
+    --step-1: clamp(1.13rem, calc(0.99rem + 0.56vw), 1.50rem);
+    /*36px to 48px*/
+    --step-2: clamp(2.25rem, calc(1.99rem + 1.13vw), 3.00rem);
 
-    /* One-up pairs */
-    --space-3xs-2xs: clamp(0.25rem, calc(0.07rem + 0.75vw), 0.75rem); /*4-12*/
-    --space-2xs-xs: clamp(0.44rem, calc(0.20rem + 1.03vw), 1.13rem); /*7-18*/
-    --space-xs-s: clamp(0.69rem, calc(0.40rem + 1.22vw), 1.50rem); /*11-24*/
-    --space-s-m: clamp(0.88rem, calc(0.39rem + 2.07vw), 2.25rem); /*14-36*/
-    --space-m-l: clamp(1.31rem, calc(0.72rem + 2.54vw), 3.00rem); /*21-48*/
-    --space-l-xl: clamp(1.75rem, calc(0.78rem + 4.13vw), 4.50rem); /*28-72*/
-    --space-xl-2xl: clamp(2.63rem, calc(1.44rem + 5.07vw), 6.00rem);/*42-96*/
-    --space-2xl-3xl: clamp(3.50rem, calc(1.56rem + 8.26vw), 9.00rem); /*84-144*/
+    /*Modular scalar for Spacing*/
+    /*11px to 32px*/
+    --space-s-4: clamp(0.69rem, calc(0.23rem + 1.97vw), 2.00rem);
 
-    /* Custom pairs */
+    /*6px to 8px*/
+    --space-s-3: clamp(0.38rem, calc(0.33rem + 0.19vw), 0.50rem);
 
+    /*10px to 14px*/
+    --space-s-2: clamp(0.63rem, calc(0.54rem + 0.38vw), 0.88rem);
+
+    /*12px to 18px*/
+    --space-s-1: clamp(0.75rem, calc(0.62rem + 0.56vw), 1.13rem);
+
+    /*14px to 24px*/
+    --space-s0: clamp(0.88rem, calc(0.65rem + 0.94vw), 1.50rem);
+
+    /*12px to 76px*/
+    --space-s1: clamp(0.75rem, calc(-0.66rem + 6.01vw), 4.75rem);
+
+    /*20px to 42px*/
+    --space-s2: clamp(1.25rem, calc(0.77rem + 2.07vw), 2.63rem);
+
+    /*36px to 50px*/
+    --space-s3: clamp(2.25rem, calc(1.94rem + 1.31vw), 3.13rem);
+    /*40px to 259px*/
+    --space-s4: clamp(2.50rem, calc(-2.32rem + 20.56vw), 16.19rem);
+    /*50px to 78px*/
+    --space-s5: clamp(3.13rem, calc(2.51rem + 2.63vw), 4.88rem);
+
+    /*38px to 169px*/
+    --space-s6: clamp(2.38rem, calc(-0.51rem + 12.30vw), 10.56rem);
+
+    /*300px to 410px*/
+    --space-s7: clamp(18.75rem, calc(16.33rem + 10.33vw), 25.63rem);
+
+    /*25px to 40px*/
+    --space-s8: clamp(1.56rem, calc(1.23rem + 1.41vw), 2.50rem);
 
     --measure: 65ch;
     --line-height: var(--ratio);
     --line-height-small: calc(0.8*var(--ratio));
     line-height: var(--ratio);
-    font-size: calc(.333vw + 1em);
     --ff-primary: 'Crimson Pro', serif;
     --ff-secondary: 'Lora', serif;
     --ff-tertiary: 'Montserrat', sans-serif;
@@ -98,8 +118,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    line-height: 1.5;
-    font-size: 1rem;
+    padding-inline: var(--space-s1);
+    padding-block: var(--space-s2) 1.5rem;
+    border: #FFFFFF 1px solid;
 }
 
 /*Set default max-width for all first child of the container class*/
@@ -110,50 +131,166 @@ body {
 }
 
 header {
+    flex-basis: content;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem 0.75rem;
 }
 
 header * {
     display: block;
-    flex-basis: content;
 }
 
 .logo {
-    font-size: 0.875rem;
-    padding: 0.5em;
     font-family: var(--ff-primary);
     font-weight: var(--fw-extralight);
     text-transform: uppercase;
     border: 1px solid #FFFFFF;
+    font-size: 0.875rem;
+    padding: 0.571em;
 }
 
 .nav__menu img {
-    width: 38px;
+    width: 1.5rem;
     height: auto;
 }
 
 main {
-    padding-inline: 0.75rem;
+    flex: 100%;
+    margin-block-start: var(--space-s6);
 }
 
-.feature__project {
-    position: relative;
+main > * + * {
+    margin-block-start: var(--space-s8);
 }
+
+.heading > * {
+    display: block;
+}
+
+.heading >*+* {
+    margin-block-start: var(--space-s8);
+}
+
+.heading__title {
+    font-size: var(--step-2);
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-medium);
+}
+
+.heading__content {
+    font-size: var(--step-0);
+    font-family: var(--ff-tertiary);
+    font-weight: var(--fw-regular);
+    overflow-wrap: normal;
+    max-inline-size: 17.857em;
+}
+
+.heading__content span {
+    white-space: nowrap;
+}
+
+.heading__extra {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
 
 .feature__project img {
-    display: block;
+    display: inline-block;
     width: 100%;
+    max-width: 46.0625rem;
     height: auto;
 }
 
+
+.feature__project__author {
+    position: relative;
+    bottom: var(--space-s5);
+    left: 0;
+    padding-inline: var(--space-s-2);
+    background: #181719;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid white;
+    margin-inline-end: var(--space-s-4);
+    margin-inline-start: auto;
+    max-width: var(--space-s7);
+}
+
+.feature__project__author___details {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.author_img__wrapper {
+    box-sizing: content-box;
+    width: var(--space-s3);
+    padding-inline: var(--space-s-1);
+    padding-block-start: var(--space-s-3);
+    padding-block-end: var(--space-s-2);
+}
+
+
+.author_img__wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.author__name h3 {
+    font-family: var(--ff-tertiary);
+    font-weight: var(--fw-medium);
+    font-size: var(--step--2);
+}
+
+.author__name p {
+    font-family: var(--ff-tertiary);
+    font-weight: var(--fw-medium);
+    font-size: var(--step--3);
+    color: #828282;
+}
+
+.feature__project__author h2 {
+    padding-inline-start: calc(var(--space-s-2) + var(--space-s-3));
+    padding-inline-end: 3.944em;
+    margin-block-end: 1.38em;
+    font-size: var(--step-1);
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-secondary);
+}
+
+
+
+footer {
+    flex-basis: content;
+}
 
 .foot__note {
     font-family: var(--ff-tertiary);
     text-align: center;
     font-size: 0.874rem;
     color: #A9A9A9;
+}
+
+@media only screen and (min-width: 820px) {
+    main {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        column-gap: 1rem;
+    }
+
+    main>* {
+        flex-basis: content;
+    }
+        main>*+* {
+            margin-block-start: 0;
+        }
+
+
 }
