@@ -105,6 +105,8 @@ body {
 /*Set default max-width for all first child of the container class*/
 .container>* {
     max-width: 100%;
+    flex-basis: content;
+    border: #FFFFFF 1px solid;
 }
 
 header {
@@ -138,7 +140,7 @@ main {
     padding-inline: 0.75rem;
 }
 
-.feacture__project {
+.feature__project {
     position: relative;
 }
 
@@ -146,4 +148,12 @@ main {
     display: block;
     width: 100%;
     height: auto;
+}
+
+
+.foot__note {
+    font-family: var(--ff-tertiary);
+    text-align: center;
+    font-size: 0.874rem;
+    color: #A9A9A9;
 }
