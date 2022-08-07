@@ -39,7 +39,7 @@
 ![screenshot](final_screenshot.png)
 
 ### Showing mobile menu
-![screenshot](final_screenshot_mobile.png)
+![screenshot](final_screenshot2.png)
 
 This challenge was undertaken to further strengthen my understanding of basic HTML and CSS with consideration for a responsive design using algorithm layout concepts.
 
