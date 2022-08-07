@@ -42,7 +42,7 @@ This challenge was undertaken to further strengthen my understanding of basic HT
 
 - The live demo can be seen [here](https://fmanimashaun.com/projects/devchallenges.io/my-team-page-challenge/)
 - So far, I believe can say I am getting good with reading UI/UX design on Figma and implementing the design using HTML/CSS
-- WI feel there is still a lot to learn and understand with respect to layout
+- I feel there is still a lot to learn and understand with respect to layout
 
 ### Built With
 
