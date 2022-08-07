@@ -45,7 +45,7 @@ This challenge was undertaken to further strengthen my understanding of basic HT
 
 - The live demo can be seen [here](https://fmanimashaun.com/projects/devchallenges.io/interior-consultant-challenge/)
 - So far, I believe can say I am getting good with reading UI/UX design on Figma and implementing the design using HTML/CSS/Javascript
-- I feel there is still a lot to learn and understand with respect to layout but there was a lot of improvement with this particular challenge with the use of custom modular scale and responsive design
+- I feel there is still a lot to learn and understand with respect to the layout but there was a lot of improvement with this particular challenge with the use of custom modular scale and responsive design
 
 ### Built With
 
@@ -58,14 +58,14 @@ This challenge was undertaken to further strengthen my understanding of basic HT
 
 ## Features
 
-<!-- List the features of your application or follow the template. Don't share the figma file here :) -->
+<!-- List the features of your application or follow the template. Don't share the Figma file here :) -->
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/Jymh2b2FyebRTUljkNcb) was to build an application to complete the given user stories.
 
 
 ## Acknowledgements
 
-<!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For exmpale -->
+<!-- This section should list any articles or add-ons/plugins that help you to complete the project. This is optional but it will help you in the future. For example -->
 - [Marked - a markdown parser](https://github.com/chjj/marked)
 
 ## Contact
