@@ -1,37 +1,32 @@
 /*import fonts*/
 
-/*PT Serif font*/
+/*Playfair Display Font*/
 @font-face {
-    font-family: 'PT Serif';
-    src: url("../font/PT_Serif/PTSerif-Regular.ttf") format('TrueType');
-    font-weight: 400;
+    font-family: 'Playfair Display';
+    src: url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf") format('TrueType');
+    font-style: normal;
 }
 
 @font-face {
-    font-family: 'PT Serif';
-    src: url("../font/PT_Serif/PTSerif-Bold.ttf") format("TrueType");
-    font-weight: 700;
+    font-family: 'Playfair Display';
+    src: url("../fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf") format('TrueType');
+    font-style: italic;
 }
 
-/*Poppins font*/
+/*Montserrat Font*/
 @font-face {
-    font-family: 'Poppins';
-    src: url("../font/Poppins/Poppins-Regular.ttf") format("TrueType");
-    font-weight: 400;
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("TrueType");
+    font-style: normal;
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url("../font/Poppins/Poppins-SemiBold.ttf") format("TrueType");
-    font-weight: 600;
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf") format("TrueType");
+    font-style: italic;
 }
 
-/*Montserrat font*/
-@font-face {
-    font-family: 'Poppins';
-    src: url("../font/Montserrat/Montserrat-VariableFont_wght.ttf") format("TrueType");
-    font-weight: 500;
-}
+
 
 /*Universal reset*/
 *,
@@ -50,33 +45,69 @@
 
 /*modular Scale*/
 :root {
-    --ratio: 1.4;
-    --s-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
-    --s-4: clamp(0.41rem, 0.47rem + -0.31vw, 0.25rem);
-    --s-3: clamp(0.51rem, 0.57rem + -0.31vw, 0.35rem);
-    --s-2: clamp(0.64rem, 0.69rem + -0.27vw, 0.5rem);
-    --s-1: clamp(0.8rem, 0.84rem + -0.18vw, 0.71rem);
-    --s0: clamp(1rem, 1rem + 0vw, 1rem);
-    --s1: clamp(1.25rem, 1.19rem + 0.32vw, 1.41rem);
-    --s2: clamp(1.56rem, 1.39rem + 0.85vw, 2rem);
-    --s3: clamp(1.95rem, 1.61rem + 1.7vw, 2.83rem);
-    --s4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
-    --s5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
+    --ratio: 1.5;
+    /*Fluid Topography*/
+    /*8px to 10px*/
+    --s-5: clamp(0.5rem, 0.456rem + 0.1878vw, 0.625rem);
+
+    /*10px to 12px*/
+    --s-4: clamp(0.625rem, 0.581rem + 0.1878vw, 0.75rem);
+
+    /*10px to 14px*/
+    --s-3: clamp(0.625rem, 0.537rem + 0.3756vw, 0.875rem);
+
+    /*12px to 14px*/
+    --s-2: clamp(0.75rem, 0.706rem + 0.1878vw, 0.875rem);
+
+    /*12px to 16px*/
+    --s-1: clamp(0.75rem, 0.662rem + 0.3756vw, 1rem);
+
+    /*14px to 16px*/
+    --s0: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
+
+    /*15px to 17px*/
+    --s1: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
+
+    /*16px to 18px*/
+    --s2: clamp(1rem, 0.956rem + 0.1878vw, 1.125rem);
+
+    /*18px to 24px*/
+    --s3: clamp(1.125rem, 0.993rem + 0.5634vw, 1.5rem);
+
+    /*24px to 32px*/
+    --s4: clamp(1.5rem, 1.3239rem + 0.7512vw, 2rem);
+
+    /*24px to 48px*/
+    --s5: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem);
+
+    /*32px to 64px*/
+    --s6: clamp(2rem, 1.2958rem + 3.0047vw, 4rem);
+
+    /*Custom fluid space*/
+    /*32px to 52px*/
+    --space-1: clamp(2rem, 1.5599rem + 1.8779vw, 3.25rem);
+
+    /*12px to 234px*/
+    --space-2: clamp(0.75rem, -4.1356rem + 20.8451vw, 14.625rem);
+
     --measure: 65ch;
     --line-height: var(--ratio);
     --line-height-small: calc(0.8*var(--ratio));
     --border-thin: var(--s-5);
     --border-thick: var(--s-2);
     line-height: var(--ratio);
-    font-size: calc(.333vw + 1em);
-    --ff-primary: 'PT Serif', serif;
-    --ff-secondary: 'Poppins', sans-serif;
-    --ff-tertiary: 'Montserrat', sans-serif;
-    --fw-primary: 700;
-    --fw-secondary: 600;
-    --fw-tertiary: 400;
-    --fs-primary: var(--s2);
-    --fs-secondary: var(--s0);
+    --ff-primary: 'Montserrat', sans-serif;
+    --ff-secondary: 'Playfair Display', serif;
+    --fw-bold: 700;
+    --fw-medium: 500;
+    --fw-regular: 400;
+    --primary-color: #333333;
+    --secondary-color: #4f4f4f;
+    --tertiary-color: #bdbdbd;
+    --quaternary-color: #f2994a;
+    --quinary-color: #828282;
+    --white-color: #FFFFFF;
+    --black--color: #000000;
 }
 
 /*Universal styling*/
@@ -88,20 +119,36 @@ body {
 
 /*creating a stack container*/
 .container {
-    max-width: 90%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     line-height: 1.5;
-    margin-block-start: 4.12rem;
-    margin-block-end: var(--s1);
-    margin-inline: auto;
+    padding-block: var(--space-1) 1.5rem;
+    padding-inline: var(--space-2);
+    font-family: var(--ff-primary);
+    color: var(--primary-color);
 }
 
 /*Set default max-width for all first child of the container class*/
 .container>* {
     max-width: 100%;
+}
+
+.title {
+    font-size: var(--s4);
+    line-height: var(--s6);
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-secondary);
+    color: var(--black--color);
+}
+
+.tagline__text {
+    font-size: var(--s-2);
+    line-height: var(--s1);
+    font-style: italic;
+    font-weight: var(--fw-medium);
+    color: var(--secondary-color);
 }
 
 
@@ -110,3 +157,5 @@ body {
     width: 100%;
     height: auto;
 }
+
+/*Aside section*/
