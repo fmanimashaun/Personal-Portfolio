@@ -90,7 +90,24 @@
     /*12px to 234px*/
     --space-2: clamp(0.75rem, -4.1356rem + 20.8451vw, 14.625rem);
 
-    --measure: 65ch;
+    /*24px to 43px*/
+    --space-3: clamp(1.5rem, 1.0819rem + 1.784vw, 2.6875rem);
+
+    /*24px to 48px*/
+    --space-4: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem);
+
+    /*20px to 43px*/
+    --space-5: clamp(1.25rem, 0.7438rem + 2.1596vw, 2.6875rem);
+
+    /*14px to 24px*/
+    --space-6: clamp(0.875rem, 0.6549rem + 0.939vw, 1.5rem);
+
+    /*5px to 14px*/
+    --space-7: clamp(0.3125rem, 0.1144rem + 0.8451vw, 0.875rem);
+
+    /*30px to 48px*/
+    --space-8: clamp(1.875rem, 1.4789rem + 1.6901vw, 3rem);
+
     --line-height: var(--ratio);
     --line-height-small: calc(0.8*var(--ratio));
     --border-thin: var(--s-5);
@@ -141,16 +158,36 @@ body {
     font-weight: var(--fw-bold);
     font-family: var(--ff-secondary);
     color: var(--black--color);
+    margin-block-end: 0.75rem;
+}
+
+.header__tagline {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.75rem;
+    align-items: flex-start;
+}
+
+.tagline__icon {
+    flex-basis: content;
+    position: relative;
+    top: calc((var(--s1) - var(--s-2))*2);
 }
 
 .tagline__text {
+    flex-basis: auto;
     font-size: var(--s-2);
     line-height: var(--s1);
     font-style: italic;
     font-weight: var(--fw-medium);
     color: var(--secondary-color);
+    max-inline-size: 37rem;
+    margin-block-end: var(--space-3);
 }
 
+.hero {
+    margin-block-end: var(--space-4);
+}
 
 .hero img {
     display: block;
@@ -159,3 +196,46 @@ body {
 }
 
 /*Aside section*/
+.details {
+    margin-block-end: var(--space-8);
+}
+
+.details>*+* {
+    margin-block-start: var(--space-5);
+}
+
+.time {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.detail_item {
+    display: flex;
+    column-gap: var(--space-7);
+}
+
+
+.detail__text__title {
+    font-size: var(--s-5);
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    line-height: var(--s-4);
+    color: var(--tertiary-color);
+}
+
+.detail__value {
+    font-size: var(--s-3);
+    font-weight: var(--fw-medium);
+    line-height: var(--s-1);
+}
+
+.detail__icon {
+    width: var(--space-6);
+    height: auto;
+}
+
+.list,
+.instruction__text {
+    max-inline-size: 37rem;
+}
