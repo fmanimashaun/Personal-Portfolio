@@ -1,35 +1,8 @@
 /*import fonts*/
-/*PT Serif font*/
-@font-face {
-    font-family: 'PT Serif';
-    src: url("../font/PT_Serif/PTSerif-Regular.ttf") format('TrueType');
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'PT Serif';
-    src: url("../font/PT_Serif/PTSerif-Bold.ttf") format("TrueType");
-    font-weight: 700;
-}
-
-/*Poppins font*/
-@font-face {
-    font-family: 'Poppins';
-    src: url("../font/Poppins/Poppins-Regular.ttf") format("TrueType");
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url("../font/Poppins/Poppins-SemiBold.ttf") format("TrueType");
-    font-weight: 600;
-}
-
 /*Montserrat font*/
 @font-face {
-    font-family: 'Poppins';
-    src: url("../font/Montserrat/Montserrat-VariableFont_wght.ttf") format("TrueType");
-    font-weight: 500;
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format('TrueType');
 }
 
 /*Universal reset*/
@@ -49,7 +22,6 @@
 
 /*modular Scale*/
 :root {
-    --ratio: 1.4;
     --s-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
     --s-4: clamp(0.41rem, 0.47rem + -0.31vw, 0.25rem);
     --s-3: clamp(0.51rem, 0.57rem + -0.31vw, 0.35rem);
@@ -61,21 +33,44 @@
     --s3: clamp(1.95rem, 1.61rem + 1.7vw, 2.83rem);
     --s4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
     --s5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
-    --measure: 65ch;
-    --line-height: var(--ratio);
-    --line-height-small: calc(0.8*var(--ratio));
-    --border-thin: var(--s-5);
-    --border-thick: var(--s-2);
-    line-height: var(--ratio);
-    font-size: calc(.333vw + 1em);
-    --ff-primary: 'PT Serif', serif;
-    --ff-secondary: 'Poppins', sans-serif;
-    --ff-tertiary: 'Montserrat', sans-serif;
-    --fw-primary: 700;
-    --fw-secondary: 600;
-    --fw-tertiary: 400;
+
+    /*Custom modular spacing*/
+    /*30px to 60px*/
+    --space-1: clamp(1.875rem, 1.2148rem + 2.8169vw, 3.75rem);
+
+    /*12px to 238px*/
+    --space-2: clamp(0.75rem, -4.2236rem + 21.2207vw, 14.875rem);
+
+    /*101.76px to 156px*/
+    --space-3: clamp(6.36rem, 5.1663rem + 5.093vw, 9.75rem);
+
+    /*78px to 100px*/
+    --space-4: clamp(4.875rem, 4.3908rem + 2.0657vw, 6.25rem);
+
+    /*12px to 24px*/
+    --space-5: clamp(0.75rem, 0.4859rem + 1.1268vw, 1.5rem);
+
+    /*109.32px to 299px*/
+    --space-6: clamp(6.8325rem, 2.6582rem + 17.8103vw, 18.6875rem);
+
+    /*12px to 32px*/
+    --space-7: clamp(0.75rem, 0.3099rem + 1.8779vw, 2rem);
+
+    /*39px to 64px*/
+    --space-8: clamp(2.4375rem, 1.8873rem + 2.3474vw, 4rem);
+
+    /*44px to 134px*/
+    --space-9: clamp(2.75rem, 0.7694rem + 8.4507vw, 8.375rem);
+
+    --ff-primary: 'Montserrat', sans-serif;
+    --fw-primary: 600;
+    --fw-secondary: 500;
     --fs-primary: var(--s2);
     --fs-secondary: var(--s0);
+    --primary-color: #4E5150;
+    --secondary-color: #A9A9A9;
+    --tertiary-color: #BDBDBD;
+    --footer-color: #B9BDCF;
 }
 
 /*Universal styling*/
@@ -85,20 +80,121 @@ body {
     padding: 0;
 }
 
+
+
 /*creating a stack container*/
 .container {
-    max-width: 90%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     line-height: 1.5;
-    margin-block-start: 4.12rem;
-    margin-block-end: var(--s1);
-    margin-inline: auto;
+    padding: var(--space-1) var(--space-2) 1.5rem var(--space-2);
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-primary);
 }
 
 /*Set default max-width for all first child of the container class*/
 .container>* {
     max-width: 100%;
+}
+
+.page__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block-end: var(--space-8);
+}
+
+.profile__img {
+    width: var(--space-3);
+    height: auto;
+    border-radius: 1rem;
+}
+
+.profile__name {
+    color: var(--primary-color);
+}
+
+.profile__location {
+    color: var(--secondary-color);
+}
+
+.stat {
+    color: var(--primary-color);
+}
+
+.stat__name {
+    color: var(--tertiary-color);
+}
+
+.profile__stats {
+    display: flex;
+    flex-direction: row wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: var(--space-5);
+}
+
+.profile__stat {
+    width: var(--space-4);
+    background: #E5E5E5;
+    border-radius: 0.75rem;
+    padding-block: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture__gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: var(--space-7);
+    margin-block-end: var(--space-9);
+}
+
+.picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.image__1 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.image__2 {
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 1;
+}
+
+.image__3 {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+}
+
+.image__4 {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 2;
+}
+
+.image__5 {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+}
+
+.image__6 {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+}
+
+
+.foot__note {
+    text-align: center;
+    color: var(--footer-color);
+    font-weight: var(--fw-secondary);
 }
