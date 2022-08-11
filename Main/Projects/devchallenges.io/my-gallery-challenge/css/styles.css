@@ -22,17 +22,23 @@
 
 /*modular Scale*/
 :root {
-    --s-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
-    --s-4: clamp(0.41rem, 0.47rem + -0.31vw, 0.25rem);
-    --s-3: clamp(0.51rem, 0.57rem + -0.31vw, 0.35rem);
-    --s-2: clamp(0.64rem, 0.69rem + -0.27vw, 0.5rem);
-    --s-1: clamp(0.8rem, 0.84rem + -0.18vw, 0.71rem);
-    --s0: clamp(1rem, 1rem + 0vw, 1rem);
-    --s1: clamp(1.25rem, 1.19rem + 0.32vw, 1.41rem);
-    --s2: clamp(1.56rem, 1.39rem + 0.85vw, 2rem);
-    --s3: clamp(1.95rem, 1.61rem + 1.7vw, 2.83rem);
-    --s4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
-    --s5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
+
+    /*Custom modular scale font-size*/
+    /*12px to 18px*/
+    --s-3: clamp(0.75rem, 0.618rem + 0.5634vw, 1.125rem);
+
+    /*12px to 14px*/
+    --s-2: clamp(0.75rem, 0.706rem + 0.1878vw, 0.875rem);
+
+    /*10px to 14px*/
+    --s-1: clamp(0.625rem, 0.537rem + 0.3756vw, 0.875rem);
+
+    /*14px to 16px*/
+    --s0: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
+
+    /*14px to 24px*/
+    --s1: clamp(0.875rem, 0.6549rem + 0.939vw, 1.5rem);
+   
 
     /*Custom modular spacing*/
     /*30px to 60px*/
@@ -103,10 +109,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-block-end: var(--space-8);
+}
+
+.page__heading > * + * {
+    margin-block-start: var(--space-5);
 }
 
 .profile__img {
+    display: block;
     width: var(--space-3);
     height: auto;
     border-radius: 1rem;
@@ -114,18 +124,23 @@ body {
 
 .profile__name {
     color: var(--primary-color);
+    font-size: var(--s1);
 }
 
 .profile__location {
     color: var(--secondary-color);
+    font-size: var(--s-1);
+    margin-block-start: calc(var(--space-5)/3);
 }
 
 .stat {
     color: var(--primary-color);
+    font-size: var(--s-3);
 }
 
 .stat__name {
     color: var(--tertiary-color);
+    font-size: var(--s-2);
 }
 
 .profile__stats {
@@ -147,16 +162,19 @@ body {
     align-items: center;
 }
 
+
 .picture__gallery {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: var(--space-7);
+    margin-block-start: var(--space-8);
     margin-block-end: var(--space-9);
 }
 
 .picture img {
+    display: block;
     width: 100%;
     height: auto;
     border-radius: 12px;
@@ -197,4 +215,6 @@ body {
     text-align: center;
     color: var(--footer-color);
     font-weight: var(--fw-secondary);
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
 }
