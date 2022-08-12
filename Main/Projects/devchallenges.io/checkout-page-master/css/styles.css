@@ -28,7 +28,11 @@
 
 
     /*Custom modular spacing*/
-    
+    /*12px to 240px*/
+    --space-1: clamp(0.75rem, -4.2676rem + 21.4085vw, 15rem);
+
+    /*32px to 64px*/
+   --space-2: clamp(2rem, 1.2958rem + 3.0047vw, 4rem);
 
     --ff-primary: 'Montserrat', sans-serif;
     --fw-primary: 600;
@@ -53,6 +57,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    padding: var(--space-2) var(--space-1) 1.5rem var(--space-1);
 }
 
 /*Set default max-width for all first child of the container class*/
