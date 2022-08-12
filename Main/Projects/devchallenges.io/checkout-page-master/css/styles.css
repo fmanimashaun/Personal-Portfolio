@@ -24,7 +24,7 @@
 :root {
 
     /*Custom modular scale font-size*/
-    
+
 
 
     /*Custom modular spacing*/
@@ -32,7 +32,16 @@
     --space-1: clamp(0.75rem, -4.2676rem + 21.4085vw, 15rem);
 
     /*32px to 64px*/
-   --space-2: clamp(2rem, 1.2958rem + 3.0047vw, 4rem);
+    --space-2: clamp(2rem, 1.2958rem + 3.0047vw, 4rem);
+
+    /*12px to 14px*/
+    --space-3: clamp(0.75rem, 0.706rem + 0.1878vw, 0.875rem);
+
+    /*25px to 30px*/
+    --space-4: clamp(1.5625rem, 1.4525rem + 0.4695vw, 1.875rem);
+
+    /*30px to 32px*/
+    --space-5: clamp(1.875rem, 1.831rem + 0.1878vw, 2rem);
 
     --ff-primary: 'Montserrat', sans-serif;
     --fw-primary: 600;
@@ -61,14 +70,33 @@ body {
 }
 
 /*Set default max-width for all first child of the container class*/
-.container> * {
+.container>* {
     max-width: 100%;
 }
 
 /*Make the main element centered vertically*/
 
-.container> main {
+.container>main {
     margin-block: auto;
+}
+
+/*Styling the checkout card*/
+.checkout__items {
+    padding: var(--space-5) var(--space-4) var(--space-3);
+    background: #F2F2F2;
+    border-radius: 12px;
+}
+
+/*Disable the spinner button in Chrome, Safari, Edge, Opera*/
+.item_qty input::-webkit-outer-spin-button,
+.item_qty input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/*Disable the spinner button in Firefox */
+.item_qty input[type=number] {
+    -moz-appearance: textfield;
 }
 
 
