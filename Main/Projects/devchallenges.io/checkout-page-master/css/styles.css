@@ -43,6 +43,12 @@
     /*30px to 32px*/
     --space-5: clamp(1.875rem, 1.831rem + 0.1878vw, 2rem);
 
+    /*28px to 32px*/
+    --space-6: clamp(1.75rem, 1.662rem + 0.3756vw, 2rem);
+
+    /*87px to 95px*/
+    --space-7: clamp(5.4375rem, 5.2614rem + 0.7512vw, 5.9375rem);
+
     --ff-primary: 'Montserrat', sans-serif;
     --fw-primary: 600;
     --fw-secondary: 500;
@@ -80,11 +86,63 @@ body {
     margin-block: auto;
 }
 
+.container> :first-child:not(main) {
+    margin-block-start: 0;
+}
+
+.container> :last-child:not(main) {
+    margin-block-end: 0;
+}
+
 /*Styling the checkout card*/
 .checkout__items {
     padding: var(--space-5) var(--space-4) var(--space-3);
     background: #F2F2F2;
     border-radius: 12px;
+}
+
+.checkout__items>*+* {
+    margin-block-start: var(--space-6);
+}
+
+.checkout__items>*:last-child {
+    margin-block-start: var(--space-7);
+}
+
+.item {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 1.25rem;
+}
+
+.item>* {
+    flex-basis: calc(50% - 1.25rem);
+}
+
+.item_img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+}
+
+.price {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 1.25rem;
+}
+
+.pricing>* {
+    line-height: 1.21em;
+    padding-block: 0.67em;
+}
+
+.shipping {
+    border-block: 1px solid #BDBDBD;
 }
 
 /*Disable the spinner button in Chrome, Safari, Edge, Opera*/
@@ -98,6 +156,7 @@ body {
 .item_qty input[type=number] {
     -moz-appearance: textfield;
 }
+
 
 
 .foot__note {
