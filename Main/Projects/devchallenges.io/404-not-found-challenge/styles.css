@@ -62,7 +62,7 @@ header {
     max-width: 36.625rem;
     font-family: 'Space Mono';
     font-weight: 700;
-    font-size: 64px;
+    font-size: clamp(3rem, 2.6479rem + 1.5023vw, 4rem);
     line-height: 1.4844;
     letter-spacing: -0.035em;
     color: #333333;
@@ -137,7 +137,9 @@ footer .credit {
 
     .right-col h2 {
         margin-block-end: 1.875rem;
+        /*
         font-size: 3rem;
+        */
         line-height: 1.4792;
         letter-spacing: -0.035em;
     }

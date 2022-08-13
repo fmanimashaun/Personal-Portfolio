@@ -57,21 +57,24 @@
         </div>
       </div>
       <form action="#" class="personal__details">
-        <fieldset>
+        <fieldset class="contact__info">
           <legend>Contact infomation</legend>
-          <fieldset>
-            <label>E-mail:</label>
-            <input type="email" name="email" required />
-          </fieldset>
-          <fieldset>
-            <label>Phone:</label>
-            <input type="phone" name="email" required />
-          </fieldset>
+          <div>
+            <label for="email">E-mail</label>
+            <div class="email">
+              <img src="img/email.svg" alt="email icon">
+              <input id="email" type="email" name="email" autocomplete="email" placeholder="Enter your email..." required/>
+            </div>
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <div class="phone">
+              <img src="img/phone.svg" alt="phone number icon">
+              <input id="phone" type="tel" name="phone" autocomplete="phone" placeholder="Enter your phone..." required/>
+            </div>
+          </div>
         </fieldset>
-        <fieldset>
-          <legend>Shipping address</legend>
-        </fieldset>
-
+       
       </form>
     </main>
     <footer>

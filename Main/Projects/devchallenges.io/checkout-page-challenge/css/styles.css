@@ -94,6 +94,13 @@ body {
     margin-block-end: 0;
 }
 
+/*input field styling*/
+
+ input {
+     border: 1px solid #828282;
+     border-radius: 12px;
+ }
+
 /*Styling the checkout card*/
 .checkout__items {
     padding: var(--space-5) var(--space-4) var(--space-3);
@@ -152,10 +159,12 @@ body {
     margin: 0;
 }
 
-/*Disable the spinner button in Firefox */
+/*Disable the spinner button in Firefox and centering the text*/
 .item_qty input[type=number] {
     -moz-appearance: textfield;
+    text-align: center;
 }
+
 
 
 
