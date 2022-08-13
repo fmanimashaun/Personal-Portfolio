@@ -92,6 +92,21 @@
     /*94px to 159px*/
     --space-17: clamp(5.875rem, 4.4445rem + 6.1033vw, 9.9375rem);
 
+    /*123px to 134px*/
+    --space-18: clamp(7.6875rem, 7.4454rem + 1.0329vw, 8.375rem);
+
+    /*16px to 22px*/
+    --space-19: clamp(1rem, 0.868rem + 0.5634vw, 1.375rem);
+
+    /*24px to 32px*/
+    --space-20: clamp(1.5rem, 1.3239rem + 0.7512vw, 2rem);
+
+    /*7px to 11px*/
+    --space-21: clamp(0.4375rem, 0.3495rem + 0.3756vw, 0.6875rem);
+
+    /*16px to 21px*/
+    --space-22: clamp(1rem, 0.89rem + 0.4695vw, 1.3125rem);
+
     --ff-primary: 'Montserrat', sans-serif;
     --fw-primary: 600;
     --fs-primary: var(--s2);
@@ -101,6 +116,7 @@
     --tertiary-color: #F2994A;
     --quaternary-color: #4F4F4F;
     --quinary-color: #828282;
+    --white-color: #FFFFFF;
     --footer-color: #BDBDBD;
 }
 
@@ -140,7 +156,10 @@ body {
     margin-block: auto;
     margin-inline: auto;
     max-width: fit-content;
+    min-width: 21.875rem;
+    max-width: 23.9375rem;
 }
+
 
 .container> :first-child:not(main) {
     margin-block-start: 0;
@@ -154,7 +173,8 @@ body {
 
 /*input field styling*/
 
-input {
+input,
+select {
     border: 1px solid #828282;
     border-radius: 12px;
 }
@@ -178,12 +198,12 @@ input {
 .item {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
     column-gap: 1.25rem;
 }
 
-.item>* {
-    width: calc(50% - 1.25rem);
+
+.item_img {
+    width: var(--space-18);
 }
 
 .item_img img {
@@ -194,18 +214,21 @@ input {
 }
 
 .item__details {
+    flex-basis: calc(100% - var(--space-18)- 1.25rem);
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .item_qty {
-    width: fit-content;
+    max-width: 8.3906rem;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: clamp(0.5rem, 1rem, 1rem) var(--space-11);
+    margin-inline-end: calc(var(--space-10) - var(--space-3));
     border: 1px solid #828282;
     border-radius: 12px;
 }
@@ -219,19 +242,16 @@ input {
     width: 1.1875rem;
     height: auto;
     border-radius: 4px;
+    box-shadow: 1px 1px;
 }
 
-.item_qty>*+* {
-    margin-inline-start: 1.875rem;
+.item_qty img:hover {
+    cursor: pointer;
 }
 
-
-
-
-
-
-
-
+.item_qty img:active {
+    box-shadow: none;
+}
 
 .item__name {
     display: inline-block;
@@ -270,53 +290,73 @@ input {
     border-block: 1px solid #BDBDBD;
 }
 
-/*Disable the spinner button in Chrome, Safari, Edge, Opera*/
-.item_qty input::-webkit-outer-spin-button,
-.item_qty input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
 
-/*Disable the spinner button in Firefox and centering the text*/
-.item_qty input[type=number] {
-    -moz-appearance: textfield;
-    text-align: center;
-}
 
 .contact__info {
     margin-block-end: var(--space-15);
 }
 
-.contact__info>*+* {
+.billing__info {
+    margin-block-end: var(--space-19);
+}
+
+.contact__info>*+*,
+.billing__info>*+* {
     margin-block-start: var(--space-3);
 }
 
-.contact__info legend {
+.contact__info legend,
+.billing__info legend {
     font-size: var(--s1);
     color: var(--secondary-color);
 }
 
-.contact__info label {
+.contact__info label,
+.billing__info label {
     font-size: var(--s-2);
     color: var(--quaternary-color);
     margin-block-end: 0.375rem;
 }
 
-.contact__info input {
+.contact__info input,
+.billing__info input,
+.billing__info select {
     display: block;
     width: 100%;
     padding-inline: var(--space-13);
     padding-block: var(--space-14);
 }
 
-.contact__info input::placeholder {
+.contact__info input::placeholder,
+.billing__info input::placeholder {
     color: var(--quinary-color);
     font-size: var(--s-1);
+    font-weight: 600;
+}
+
+.billing__info #full__name::placeholder {
+    color: var(--secondary-color);
 }
 
 .email,
-.phone {
+.phone,
+.full__name,
+.address,
+.city,
+.country,
+.postal {
     position: relative;
+}
+
+.country__postal {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    column-gap: var(--space-20);
+}
+
+.country__postal>* {
+    flex-basis: calc(50% - var(--space-20));
 }
 
 .img__icon {
@@ -328,15 +368,96 @@ input {
 }
 
 .email img,
-.phone img {
+.phone img,
+.full__name img,
+.address img,
+.city img,
+.country img,
+.postal img {
     display: block;
     width: var(--space-12);
     height: auto;
 }
 
+/*Custom checkbox*/
+.save__data {
+    font-size: var(--s-2);
+    color: var(--quaternary-color);
+    display: flex;
+    line-height: var(--space-22);
+    align-items: center;
+    position: relative;
+    padding-left: calc(var(--space-21) + 21px);
+    cursor: pointer;
+}
 
+/* Hiding the initial checkbox */
+.save__data input[type=checkbox] {
+    visibility: hidden;
+}
 
+/* Creating a custom checkbox based on demand */
+.save__data__checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--space-22);
+    width: var(--space-22);
+    border: 1px solid var(--quinary-color);
+    border-radius: 0.25rem;
+}
 
+/* Specify the background color to be shown when hovering over checkbox */
+.save__data:hover input~.save__data__checkbox {
+    background-color: gray;
+}
+
+/* Specify the background color to be shown when checkbox is checked */
+
+/* Checkmark to be shown in checkbox */
+/* It is not be shown when not checked */
+.save__data__checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Display checkmark when checked */
+.save__data input:checked~.save__data__checkbox:after {
+    display: block;
+}
+
+/* Styling the checkmark using webkit */
+/* Rotated the rectangle by 45 degree and 
+          showing only two border to make it look
+          like a tickmark */
+.save__data .save__data__checkbox:after {
+    left: 8px;
+    bottom: 5px;
+    width: 6px;
+    height: 12px;
+    border: solid var(--secondary-color);;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.submit-btn__wrapper {
+    text-align: right;
+    margin-block-start: 1.25rem;
+}
+
+.submit-btn {
+    font-size: 1rem;
+    padding: 17px 45px;
+    background: var(--tertiary-color);
+    color: var(--white-color);
+    font-weight: 600;
+}
+
+.submit-btn:hover {
+    cursor: pointer;
+}
 
 
 
@@ -352,25 +473,35 @@ input {
     text-decoration: none;
 }
 
-
 @media only screen and (min-width: 1024px) {
 
     .container>main {
         max-width: 100%;
         margin-inline: 0;
     }
+
+    .container> :last-child:not(main) {
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+
     .wrapper {
         display: flex;
+        max-width: 100%;
         justify-content: space-between;
+        align-items: flex-start;
         column-gap: var(--space-16);
     }
 
 
     .checkout__items {
-        max-width: 23.9375rem;
-        flex-grow: 0;
+        flex-shrink: 0;
         margin-block-end: 0;
         order: 2;
+    }
+
+    .item_qty {
+        min-width: 8.3906rem;
     }
 
     .personal__details {
@@ -380,4 +511,34 @@ input {
     }
 }
 
-@media only screen and (max-width: 375px) {}
+
+@media only screen and (max-width: 374px) {
+    .container>main {
+        margin-inline: 0;
+        max-width: 100%;
+        min-width: unset;
+    }
+
+    .item {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        row-gap: 1.25rem;
+        text-align: center;
+    }
+
+    .item_img {
+        width: 100%;
+        max-width: var(--space-18);
+    }
+
+    .item_qty {
+        margin-inline-end: 0;
+    }
+
+    .country__postal {
+        display: flex;
+        flex-flow: column;
+        row-gap: var(--space-3);
+    }
+}
