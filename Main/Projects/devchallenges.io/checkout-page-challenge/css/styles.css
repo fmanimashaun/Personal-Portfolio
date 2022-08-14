@@ -436,12 +436,14 @@ select {
     bottom: 5px;
     width: 6px;
     height: 12px;
-    border: solid var(--secondary-color);;
+    border: solid var(--secondary-color);
+    ;
     border-width: 0 2px 2px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+
 .submit-btn__wrapper {
     text-align: right;
     margin-block-start: 1.25rem;
@@ -457,6 +459,15 @@ select {
 
 .submit-btn:hover {
     cursor: pointer;
+}
+
+form:invalid [type="submit"] {
+    background-color: var(--quinary-color);
+    cursor: not-allowed;
+}
+
+form:invalid [type="submit"]:active {
+    pointer-events: none;
 }
 
 

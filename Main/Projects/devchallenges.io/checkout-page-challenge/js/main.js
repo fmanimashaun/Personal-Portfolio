@@ -4,6 +4,7 @@ const bagRemoveBtn = document.querySelector(".bagRemoveBtn");
 const shoeAddBtn = document.querySelector(".shoeAddBtn");
 const shoeRemoveBtn = document.querySelector(".shoeRemoveBtn");
 const removeBtn = document.querySelector(".removeBtn");
+const submitBtn = document.querySelector(".submit-btn");
 const bag = document.querySelector(".bag").innerHTML;
 const bagPrice = Number(bag.slice(1, 6));
 const shoes = document.querySelector(".shoe").innerHTML;
@@ -63,4 +64,8 @@ shoeRemoveBtn.addEventListener('click', function () {
     document.querySelector(".total__price__value").innerHTML = totalSum + TotalCost.toFixed(2);
 });
 
+/*Submit button*/
 
+submitBtn.addEventListener('click', function () {
+    alert("order Submitted successfully");
+});

@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">Checkout Challenge</h1>
+<h1 align="center">Checkout Page Challenge</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -8,15 +8,15 @@
 
 <div align="center">
   <h3>
-    <a href="https://fmanimashaun.com/projects/devchallenges.io/recipe-page-challenge/">
+    <a href="https://fmanimashaun.com/projects/devchallenges.io/checkout-page-challenge/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/fmanimashaun/Personal-Portfolio/tree/main/Main/Projects/devchallenges.io/recipe-page-challenge">
+    <a href="https://github.com/fmanimashaun/Personal-Portfolio/tree/main/Main/Projects/devchallenges.io/checkout-page-challenge">
       Solution
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/challenges/OEKdUZ6xs0h99C38XVht">
+    <a href="https://devchallenges.io/challenges/0J1NxxGhOUYVqihwegfO">
       Challenge
     </a>
   </h3>
@@ -37,13 +37,13 @@
 
 ## Overview
 
-![screenshot](final_screenhot.png)
+![screenshot](final_screenshot.png)
 
 This challenge was undertaken to further strengthen my understanding of basic HTML and CSS with consideration for a responsive design using algorithm layout concepts.
 
-- The live demo can be seen [here](https://fmanimashaun.com/projects/devchallenges.io/recipe-page-challenge/)
+- The live demo can be seen [here](https://fmanimashaun.com/projects/devchallenges.io/checkout-page-challenge/)
 - So far, I believe can say I am getting good with reading UI/UX design on Figma and implementing the design using HTML/CSS
-- I feel there is still a lot to learn and understand with respect to the layout but there was a lot of improvement with this particular challenge with the use of custom modular scale and responsive design
+- This particular challenge was a bit demanding and i decided to add a little extra by implementing a basic javascript DOM to manipulate some elements based on user interaction.
 
 ### Built With
 
@@ -59,7 +59,7 @@ This challenge was undertaken to further strengthen my understanding of basic HT
 <!-- List the features of your application or follow the template. Don't share the Figma file here :) -->
 
 
-This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/OEKdUZ6xs0h99C38XVht) was to build an application to complete the given user stories
+This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/0J1NxxGhOUYVqihwegfO) was to build an application to complete the given user stories
 
 ## Acknowledgements
 
