@@ -75,6 +75,60 @@ body {
     line-height: 1.25em;
 }
 
+/*Styling the mobile menu*/
+.mobile__menu {
+    display: none;
+}
+
+.menu_navlinks {
+    font-size: 1.125rem;
+    font-family: var(--ff-tertiary);
+    font-weight: var(--fw-medium);
+    line-height: 1.375rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.close__icon {
+    position: absolute;
+    z-index: 101;
+    right: 1.25rem;
+    top: 1.375rem;
+    width: 1.5rem;
+}
+
+.menu_navlinks>* a {
+    display: block;
+    padding-block: 0.5rem;
+}
+
+.menu_navlinks>* a {
+    text-decoration: none;
+}
+
+.menu_navlinks>* a:hover {
+    border-block-end: 1px solid #FFFFFF;
+}
+
+.menu_navlinks>* a.active {
+    font-weight: var(--fw-bold);
+    border-block-end: 2px solid #FFFFFF;
+}
+
+.menu_navlinks>*+* {
+    margin-block-start: 24px;
+}
+
 /*Set default max-width for all first child of the container class*/
 .container>* {
     max-width: 100%;
@@ -94,6 +148,39 @@ body {
 .container> :last-child:not(main) {
     margin-block-end: 0;
 }
+
+/*Header styling*/
+header {
+    flex-basis: content;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header * {
+    display: block;
+}
+
+.logo {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-extralight);
+    text-transform: uppercase;
+    border: 1px solid #FFFFFF;
+    font-size: 0.875rem;
+    padding: 0.571em;
+    line-height: 1rem;
+}
+
+nav {
+    display: none;
+}
+
+.nav__menu img {
+    width: 1.5rem;
+    height: auto;
+}
+
 
 
 
