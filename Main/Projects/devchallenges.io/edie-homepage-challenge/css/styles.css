@@ -403,9 +403,10 @@ nav .header__nav__links {
 }
 
 .service__title {
-    font-size: var(--s6);
+    font-size: var(--s5);
     line-height: var(--s9);
     font-weight: var(--fw-medium);
+    max-inline-size: 21.625rem;
 }
 
 footer {
