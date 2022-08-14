@@ -37,7 +37,7 @@
 
 ## Overview
 
-![screenshot](final_screenhot.png)
+![screenshot](final_screenshot.png)
 
 This challenge was undertaken to further strengthen my understanding of basic HTML and CSS with consideration for a responsive design using algorithm layout concepts.
 
