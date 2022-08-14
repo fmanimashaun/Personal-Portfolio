@@ -1,8 +1,29 @@
 /*import fonts*/
-/*Montserrat font*/
+/*Heebo variable font*/
 @font-face {
-    font-family: 'Montserrat';
-    src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format('TrueType');
+    font-family: 'Heebo';
+    src: url("../fonts/Heebo/Heebo-VariableFont_wght.ttf") format('TrueType');
+}
+
+/*Poppins medium font*/
+@font-face {
+    font-family: 'Poppins';
+    src: url("../fonts/Poppins/Poppins-Medium.ttf") format('TrueType');
+    font-weight: 500;
+}
+
+/*Poppins regular font*/
+@font-face {
+    font-family: 'Poppins';
+    src: url("../fonts/Poppins/Poppins-Regular.ttf") format('TrueType');
+    font-weight: 400;
+}
+
+/*Poppins light font*/
+@font-face {
+    font-family: 'Poppins';
+    src: url("../fonts/Poppins/Poppins-Light.ttf") format('TrueType');
+    font-weight: 300;
 }
 
 /*Universal reset*/
@@ -65,18 +86,24 @@
 
     /*Custom modular spacing*/
 
-    --ff-primary: 'Montserrat', sans-serif;
-    --fw-primary: 600;
+    --ff-primary: 'Poppins', sans-serif;
+    --ff-secondary: 'Heebo', sans-serif;
+    --fw-extrabold: 800;
+    --fw-medium: 500;
+    --fw-regular: 400;
+    --fw-light: 300;
     --fs-primary: var(--s2);
     --fs-secondary: var(--s0);
-    --primary-color: #4E5150;
-    --secondary-color: #333333;
-    --tertiary-color: #F2994A;
-    --quaternary-color: #4F4F4F;
-    --quinary-color: #828282;
-    --white-color: #FFFFFF;
-    --black-color: #000000;
-    --footer-color: #BDBDBD;
+    --dark-color: #000000;
+    --light-color: #ffffff;
+    --blue-variant-color: #2d9cdb;
+    --red-variant-color: #eb5757;
+    --gray-900-color: #100E1D;
+    --gray-800-color: #333333;
+    --gray-700-color: #4f4f4f;
+    --gray-600-color: #828282;
+    --gray-500-color: #bDbDbD;
+    --gray-400-color: #f2f2f2;
 }
 
 /*Universal styling*/
@@ -85,8 +112,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--ff-primary);
-    font-weight: var(--fw-primary);
-    color: var(--primary-color);
+    color: var(--gray-800-color);
 }
 
 /*creating a stack container*/
@@ -95,7 +121,6 @@ body {
     display: flex;
     flex-direction: column;
     padding: 0;
-    line-height: 1.25em;
 }
 
 /*Styling the mobile menu*/
@@ -186,16 +211,13 @@ header * {
 }
 
 .logo {
-    font-family: var(--ff-primary);
-    font-weight: var(--fw-extralight);
-    text-transform: uppercase;
-    border: 1px solid #FFFFFF;
-    font-size: 0.875rem;
-    padding: 0.571em;
-    line-height: 1rem;
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-extrabold);
+    font-size: var(--s5);
+    line-height: var(--s8);
 }
 
-nav {
+nav .header__nav__links {
     display: none;
 }
 
@@ -205,12 +227,68 @@ nav {
 }
 
 
+footer {
+    background: var(--gray-900-color);
+    font-size: 1.125rem;
+    line-height: 200%;
+    color: var(--light-color);
+}
+
+.footer__nav__links>* {
+    list-style: none;
+    margin: 0;
+}
+
+.footer__nav__links>* a {
+    text-decoration: none;
+}
+
+.footer__nav__links>* a:hover {
+    border-block-end: 1px solid #FFFFFF;
+}
+
+.footer__label {
+    font-size: var(--s-3);
+    line-height: var(--s1);
+    color: var(--gray-600-color);
+    font-weight: var(--fw-medium);
+}
+
+.input__wrapper {
+    position: relative;
+}
+
+.input__wrapper input[type="email"] {
+    width: 100%;
+    background-color: var(--light-color);
+    font-size: var(--s0);
+    line-height: var(--s4);
+    color: var(--gray-500-color);
+    padding: 16px 1.25em;
+    border-radius: 0.75rem;
+}
+
+.submit__btn__wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    background: transparent;
+}
+
+.input__wrapper input[type="submit"] {
+    background-color: var(--blue-variant-color);
+    padding: 5px 16px;
+    border-radius: 0.75rem;
+}
 
 
 .foot__note {
     text-align: center;
-    color: var(--footer-color);
-    font-weight: var(--fw-secondary);
+    color: var(--gray-400-color);
+    font-weight: var(--fw-regular);
     font-size: 0.875rem;
     line-height: 1.0625rem;
 }
