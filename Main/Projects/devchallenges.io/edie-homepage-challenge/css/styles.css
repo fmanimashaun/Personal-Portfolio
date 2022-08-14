@@ -406,6 +406,7 @@ nav .header__nav__links {
     font-size: var(--s5);
     line-height: var(--s9);
     font-weight: var(--fw-medium);
+    margin-inline-end: 4.1875rem;
     max-inline-size: 21.625rem;
 }
 
