@@ -319,7 +319,6 @@ nav .header__nav__links {
     height: auto;
     border: 1px solid red;
     border-radius: 1.125rem;
-    object-fit: cover;
 }
 
 
