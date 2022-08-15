@@ -1,0 +1,474 @@
+/*import fonts*/
+/*Heebo variable font*/
+@font-face {
+    font-family: 'Heebo';
+    src: url("../fonts/Heebo/Heebo-VariableFont_wght.ttf") format('TrueType');
+}
+
+/*Poppins medium font*/
+@font-face {
+    font-family: 'Poppins';
+    src: url("../fonts/Poppins/Poppins-Medium.ttf") format('TrueType');
+    font-weight: 500;
+}
+
+/*Poppins regular font*/
+@font-face {
+    font-family: 'Poppins';
+    src: url("../fonts/Poppins/Poppins-Regular.ttf") format('TrueType');
+    font-weight: 400;
+}
+
+/*Poppins light font*/
+@font-face {
+    font-family: 'Poppins';
+    src: url("../fonts/Poppins/Poppins-Light.ttf") format('TrueType');
+    font-weight: 300;
+}
+
+/*Universal reset*/
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    background-color: inherit;
+    font-family: inherit;
+    color: inherit;
+    overflow-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+    outline: none;
+}
+
+/*modular Scale*/
+:root {
+
+    /*modular scale font-size*/
+    /*10px to 14px*/
+    --s-3: clamp(0.625rem, 0.537rem + 0.3756vw, 0.875rem);
+
+    /*12px to 14px*/
+    --s-2: clamp(0.75rem, 0.706rem + 0.1878vw, 0.875rem);
+
+    /*12px to 18px*/
+    --s-1: clamp(0.75rem, 0.618rem + 0.5634vw, 1.125rem);
+
+    /*14px to 18px*/
+    --s0: clamp(0.875rem, 0.787rem + 0.3756vw, 1.125rem);
+
+    /*15px to 21px*/
+    --s1: clamp(0.9375rem, 0.8055rem + 0.5634vw, 1.3125rem);
+
+    /*18px to 24px*/
+    --s2: clamp(1.125rem, 0.993rem + 0.5634vw, 1.5rem);
+
+    /*18px to 27px*/
+    --s3: clamp(1.125rem, 0.9269rem + 0.8451vw, 1.6875rem);
+
+    /*21px to 27px*/
+    --s4: clamp(1.3125rem, 1.1805rem + 0.5634vw, 1.6875rem);
+
+    /*24px to 36px*/
+    --s5: clamp(1.5rem, 1.2359rem + 1.1268vw, 2.25rem);
+
+    /*24px to 48px*/
+    --s6: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem);
+
+    /*27px to 36px*/
+    --s7: clamp(1.6875rem, 1.4894rem + 0.8451vw, 2.25rem);
+
+    /*36px to 54px*/
+    --s8: clamp(2.25rem, 1.8539rem + 1.6901vw, 3.375rem);
+
+    /*36px to 72px*/
+    --s9: clamp(2.25rem, 1.4577rem + 3.3803vw, 4.5rem);
+
+    /*Custom modular spacing*/
+    /*0px to 16px*/
+    --space1: clamp(0rem, -0.3521rem + 1.5023vw, 1rem);
+
+    /*10px to 165px*/
+    --space2: clamp(0.625rem, -2.7861rem + 14.554vw, 10.3125rem);
+
+    /*10px to 170px*/
+    --space3: clamp(0.625rem, -2.8961rem + 15.0235vw, 10.625rem);
+
+    /*13px to 42px*/
+    --space4: clamp(0.8125rem, 0.1743rem + 2.723vw, 2.625rem);
+
+    /*14px to 56px*/
+    --space5: clamp(0.875rem, -0.0493rem + 3.9437vw, 3.5rem);
+
+    /*15px to 45px*/
+    --space6: clamp(0.9375rem, 0.2773rem + 2.8169vw, 2.8125rem);
+
+    /*17px to 56px*/
+    --space7: clamp(1.0625rem, 0.2042rem + 3.662vw, 3.5rem);
+
+    /*22px to 42px*/
+    --space8: clamp(1.375rem, 0.9349rem + 1.8779vw, 2.625rem);
+
+    /*27px to 45px*/
+    --space9: clamp(1.6875rem, 1.2914rem + 1.6901vw, 2.8125rem);
+
+    /*33px to 42px*/
+    --space10: clamp(2.0625rem, 1.8644rem + 0.8451vw, 2.625rem);
+
+    /*36px to -10px*/
+    --space11: clamp(2.25rem, 3.2623rem + -4.3192vw, -0.625rem);
+
+    /*40px to 227px*/
+    --space12: clamp(2.5rem, -1.6153rem + 17.5587vw, 14.1875rem);
+
+    /*41px to 168px*/
+    --space13: clamp(2.5625rem, -0.2324rem + 11.9249vw, 10.5rem);
+
+    /*48px to 96px*/
+    --space14: clamp(3rem, 1.9437rem + 4.507vw, 6rem);
+
+    /*48px to 188px*/
+    --space15: clamp(3rem, -0.081rem + 13.1455vw, 11.75rem);
+
+    /*49px to 165px*/
+    --space16: clamp(3.0625rem, 0.5097rem + 10.892vw, 10.3125rem);
+
+    /*100px to 196px*/
+    --space17: clamp(6.25rem, 4.1373rem + 9.0141vw, 12.25rem);
+
+    /*100px to 220px*/
+    --space18: clamp(6.25rem, 3.6092rem + 11.2676vw, 13.75rem);
+
+    /*143px to 194px*/
+    --space19: clamp(8.9375rem, 7.8151rem + 4.7887vw, 12.125rem);
+
+    /*154px to 115px*/
+    --space20: clamp(9.625rem, 10.4833rem + -3.662vw, 7.1875rem);
+
+    /*custom font family*/
+    --ff-primary: 'Poppins', sans-serif;
+    --ff-secondary: 'Heebo', sans-serif;
+
+    /*custom font weight*/
+    --fw-extrabold: 800;
+    --fw-medium: 500;
+    --fw-regular: 400;
+    --fw-light: 300;
+
+    /*custom font color*/
+    --dark-color: #000000;
+    --light-color: #ffffff;
+    --blue-variant-color: #2d9cdb;
+    --red-variant-color: #eb5757;
+    --gray-900-color: #100E1D;
+    --gray-800-color: #333333;
+    --gray-700-color: #4f4f4f;
+    --gray-600-color: #828282;
+    --gray-500-color: #bDbDbD;
+    --gray-400-color: #f2f2f2;
+}
+
+/*Universal styling*/
+body {
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+    font-family: var(--ff-primary);
+    color: var(--gray-800-color);
+}
+
+/*creating a stack container*/
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-block-start: var(--space4);
+}
+
+/*Styling the mobile menu*/
+.mobile__menu {
+    display: none;
+}
+
+.menu_navlinks {
+    font-size: 1.5rem;
+    font-weight: var(--fw-medium);
+    line-height: 2.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--light-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.close__icon {
+    position: absolute;
+    z-index: 101;
+    right: 0.75rem;
+    top: 0.75rem;
+    width: 1.5rem;
+}
+
+.menu_navlinks>* a {
+    display: block;
+    padding-block: 0.5rem;
+}
+
+.menu_navlinks>* a {
+    text-decoration: none;
+}
+
+.menu_navlinks>* a:hover {
+    border-block-end: 2px solid var(--gray-800-color);
+}
+
+
+.menu_navlinks>*+* {
+    margin-block-start: 1.5rem;
+}
+
+/*Set default max-width for all first child of the container class*/
+.container>* {
+    max-width: 100%;
+}
+
+
+/*Make the main element centered vertically*/
+.container>main {
+    margin-block: auto;
+}
+
+
+.container> :first-child:not(main) {
+    margin-block-start: 0;
+}
+
+.container> :last-child:not(main) {
+    margin-block-end: 0;
+}
+
+/*Header styling*/
+header {
+    flex-basis: content;
+    padding-inline: var(--space5);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header * {
+    display: block;
+}
+
+.logo {
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-extrabold);
+    font-size: var(--s5);
+    line-height: var(--s8);
+}
+
+nav .header__nav__links {
+    display: none;
+}
+
+.nav__menu img {
+    width: 1.5rem;
+    height: auto;
+}
+
+/*Styling the hero section*/
+.hero__text {
+    padding-block: var(--space14) var(--space6);
+    margin-inline-start: var(--space12);
+    margin-inline-end: calc(var(--space5) + 1.5rem);
+    max-inline-size: 33.9375rem;
+}
+
+.hero__text>*+* {
+    margin-block-start: var(--space1);
+}
+
+.hero__text__extra {
+    font-size: var(--s-1);
+    line-height: var(--s3);
+    color: var(--blue-variant-color);
+    font-weight: var(--fw-medium);
+}
+
+.hero__text__content {
+    font-size: var(--s6);
+    line-height: var(--s9);
+    font-weight: var(--fw-medium);
+}
+
+.hero__img {
+    margin-inline: var(--space7);
+}
+
+.hero__img img {
+    width: 100%;
+    height: auto;
+    border: 1px solid red;
+    border-radius: 1.125rem;
+}
+
+
+/*Styling the offer section*/
+.offers {
+    padding-block: var(--space8) var(--space17);
+}
+
+.offer>*+*,
+.offer__content>*+* {
+    margin-block-start: var(--space10);
+}
+
+.offer__content__title {
+    font-size: var(--s6);
+    line-height: var(--s9);
+    font-weight: var(--fw-medium);
+    margin-inline-start: var(--space12);
+    margin-inline-end: 6.75rem;
+    max-inline-size: 22.875rem;
+}
+
+.offer__content__text {
+    font-size: var(--s-1);
+    line-height: var(--s3);
+    font-weight: var(--fw-regular);
+    margin-inline-start: var(--space12);
+    margin-inline-end: 3.75rem;
+    max-inline-size: 22.875rem;
+    color: var(--gray-700-color);
+}
+
+.offer__label {
+    font-size: var(--s-3);
+    line-height: var(--s1);
+    font-weight: var(--fw-medium);
+    color: var(--gray-600-color);
+    margin-inline-start: var(--space12);
+}
+
+.offer__input__wrapper {
+    position: relative;
+    margin-inline-start: var(--space12);
+    margin-inline-end: 2.75rem;
+    max-inline-size: 21.875rem;
+}
+
+.offer__input__wrapper input[type="email"] {
+    width: 100%;
+    background: var(--gray-400-color);
+    border-radius: 0.75rem;
+    padding-inline: 1.25rem;
+    padding-block: 0.57em;
+}
+
+.offer__input__wrapper input[type="email"]::placeholder {
+    color: var(--gray-500-color);
+}
+
+.offer__submit__btn__wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 0.25rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.offer__submit__btn__wrapper input[type="submit"] {
+    background: var(--blue-variant-color);
+    color: var(--gray-400-color);
+    font-size: var(--s0);
+    line-height: var(--s4);
+    padding-inline: 1.5em;
+    padding-block: 0.3em;
+    border-radius: 0.75rem;
+}
+
+/*Styling the service section*/
+.services {
+    padding-inline: var(--space16);
+}
+
+.service__title {
+    font-size: var(--s5);
+    line-height: var(--s9);
+    font-weight: var(--fw-medium);
+    margin-inline-end: 4.1875rem;
+    max-inline-size: 21.625rem;
+}
+
+footer {
+    background: var(--gray-900-color);
+    font-size: 1.125rem;
+    line-height: 200%;
+    color: var(--light-color);
+}
+
+.footer__nav__links>* {
+    list-style: none;
+    margin: 0;
+}
+
+.footer__nav__links>* a {
+    text-decoration: none;
+}
+
+.footer__nav__links>* a:hover {
+    border-block-end: 1px solid #FFFFFF;
+}
+
+.footer__label {
+    font-size: var(--s-3);
+    line-height: var(--s1);
+    color: var(--gray-600-color);
+    font-weight: var(--fw-medium);
+}
+
+.footer__input__wrapper {
+    position: relative;
+}
+
+.footer__input__wrapper input[type="email"] {
+    width: 100%;
+    background-color: var(--light-color);
+    font-size: var(--s0);
+    line-height: var(--s4);
+    color: var(--gray-500-color);
+    padding: 16px 1.25em;
+    border-radius: 0.75rem;
+}
+
+
+.input__wrapper input[type="submit"] {
+    background-color: var(--blue-variant-color);
+    padding: 5px 16px;
+    border-radius: 0.75rem;
+}
+
+
+.foot__note {
+    text-align: center;
+    color: var(--gray-400-color);
+    font-weight: var(--fw-regular);
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+    margin-block-end: 1.5rem;
+}
+
+.foot__note a {
+    text-decoration: none;
+}

@@ -1,12 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="img/devchallenges.png">
+  <title>devchallenges.io | Edie Homepage Challenge</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  
+  <div class="mobile__menu">
+    <ul class="menu_navlinks">
+      <li><img class="close__icon" src="img/close.svg" alt="mobile menu close icon"></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Our Works</a></li>
+      <li><a href="#">Clients</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+  <div class="container">
+    <header>
+      <span class="logo">Edie</span>
+      <nav>
+        <ul class="header__nav__links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Our Works</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav__menu">
+        <img src="img/menu.svg" alt="menu icon">
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero__text">
+          <p class="hero__text__extra">
+            Unhappy with your website?
+          </p>
+          <h2 class="hero__text__content">
+            We create beautiful and fast web services
+          </h2>
+        </div>
+        <div class="hero__img">
+          <img src="/img/image-asset.jpeg" alt="">
+        </div>
+      </section>
+      <section class="offers">
+        <div class="offer">
+          <div class="offer__content">
+            <h2 class="offer__content__title">
+              Story, emotion and purpose
+            </h2>
+            <p class="offer__content__text">
+              We help transform your ideas into real world applications that will outperform your toughest competition
+              and help you
+              achieve your strategic goals in short period of time.
+            </p>
+          </div>
+          <form action="#" class="offer__form">
+            <label class="offer__label" for="email_offer">
+              Want us to contact you?
+            </label>
+            <div class="offer__input__wrapper">
+              <div class="offer__submit__btn__wrapper">
+                <input type="submit" value="join">
+              </div>
+              <input type="email" name="email_offer" id="email_offer" placeholder="Email" required>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="services">
+        <h3 class="service__title">
+          We offer high demand services
+        </h3>
+        <div class="service design"></div>
+        <div class="service frontend"></div>
+        <div class="service backend"></div>
+      </section>
+    </main>
+    <footer>
+      <nav>
+        <ul class="footer__nav__links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Our Works</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="social__media">
+        <div class="footer__logo">
+          <span class="logo">Edie</span>
+        </div>
+        <div class="social__media__links">
+          <a href="#"><img src="img/instagram.svg" alt="instagram icon"></a>
+          <a href="#"><img src="img/linkedin.svg" alt="linkedin icon"></a>
+          <a href="#"><img src="img/twitter.svg" alt="twitter icon"></a>
+        </div>
+      </div>
+      <form action="#">
+        <label class="footer__label" for="email_footer">Want us to contact you?</label>
+        <div class="footer__input__wrapper">
+          <div class="footer__submit__btn__wrapper">
+            <input type="submit" value="join">
+          </div>
+          <input type="email" name="email_footer" id="email_footer" placeholder="Email" required>
+        </div>
+      </form>
+      <p class="foot__note">
+        created by <a href="https://github.com/fmanimashaun" target="_blank"><strong>fmanimashaun</a></strong> -
+        devChallenges.io
+      </p>
+    </footer>
+  </div>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
