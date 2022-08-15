@@ -317,7 +317,7 @@ nav .header__nav__links {
 .hero__img img {
     display: block;
     width: 100%;
-    height: auto;
+    min-height: 9.0625rem;
     border-radius: 1.125rem;
 }
 
