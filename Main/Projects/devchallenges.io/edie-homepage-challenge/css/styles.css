@@ -315,11 +315,13 @@ nav .header__nav__links {
 }
 
 .hero__img img {
-    display: block;
     width: 100%;
-    min-height: 9.0625rem;
+    height: auto;
+    border: 1px solid red;
     border-radius: 1.125rem;
+    object-fit: cover;
 }
+
 
 /*Styling the offer section*/
 .offers {
