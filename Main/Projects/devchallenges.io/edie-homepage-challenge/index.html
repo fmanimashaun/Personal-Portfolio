@@ -48,7 +48,9 @@
           </h2>
         </div>
         <div class="hero__img">
-          <img sizes="(min-width: 375px) 100vw, 389px" srcset="img/heroImage-mobile.jpg 389w, img/heroImage-tablet.jpg 778w, img/heroImage-mini_laptop.jpg 1114w, img/heroImage-desktop.jpg 1332w" src="img/heroImage-mobile.jpg" alt="hero image">
+          <img sizes="(min-width: 375px) 100vw, 389px"
+            srcset="img/heroImage-mobile.jpg 389w, img/heroImage-tablet.jpg 778w, img/heroImage-mini_laptop.jpg 1114w, img/heroImage-desktop.jpg 1332w"
+            src="img/heroImage-mobile.jpg" alt="hero image">
         </div>
       </section>
       <section class="offers">
@@ -77,12 +79,45 @@
         </div>
       </section>
       <section class="services">
-        <h3 class="service__title">
+        <h3 class="services__title">
           We offer high demand services
         </h3>
-        <div class="service design"></div>
-        <div class="service frontend"></div>
-        <div class="service backend"></div>
+        <div class="service__list">
+          <div class="service design">
+            <div class="service__icon">
+              <img src="img/design.svg" alt="UI/UX design icon">
+            </div>
+            <h4 class="service_heading">UI/UX Design</h4>
+            <p class="service__content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis
+              turpis.
+            </p>
+            <button class="design_service btn">Get started</button>
+
+          </div>
+          <div class="service frontend">
+            <div class="service__icon">
+              <img src="img/code.svg" alt="fontend development icon">
+            </div>
+            <h4 class="service_heading">Front End</h4>
+            <p class="service__content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis
+              turpis.
+            </p>
+            <button class="frontend__service btn">Get started</button>
+          </div>
+          <div class="service backend">
+            <div class="service__icon">
+              <img src="img/backend.svg" alt="backend development icon">
+            </div>
+            <h4 class="service_heading">Back End</h4>
+            <p class="service__content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis
+              turpis.
+            </p>
+            <button class="backend__service btn">Get started</button>
+          </div>
+        </div>
       </section>
     </main>
     <footer>
