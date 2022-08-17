@@ -142,8 +142,8 @@
     /*100px to 220px*/
     --space19: clamp(6.25rem, 3.6092rem + 11.2676vw, 13.75rem);
 
-    /*143px to 194px*/
-    --space20: clamp(8.9375rem, 7.8151rem + 4.7887vw, 12.125rem);
+    /*111px to 194px*/
+    --space20: clamp(6.9375rem, 5.1109rem + 7.7934vw, 12.125rem);
 
     /*154px to 115px*/
     --space21: clamp(9.625rem, 10.4833rem + -3.662vw, 7.1875rem);
@@ -163,6 +163,7 @@
     --light-color: #ffffff;
     --blue-variant-color: #2d9cdb;
     --red-variant-color: #eb5757;
+    --green-color: #27AE60;
     --gray-900-color: #100E1D;
     --gray-800-color: #333333;
     --gray-700-color: #4f4f4f;
@@ -403,7 +404,8 @@ nav .header__nav__links {
 }
 
 /*Styling the service section*/
-.services {
+.services,
+.features {
     padding-inline: var(--space16);
 }
 
@@ -411,7 +413,8 @@ nav .header__nav__links {
     margin-block: 5.375rem;
 }
 
-.services__title {
+.services__title,
+.features__title {
     font-size: var(--s5);
     line-height: var(--s9);
     font-weight: var(--fw-medium);
@@ -423,10 +426,12 @@ nav .header__nav__links {
 
 .service__list {
     margin-block-start: -3.125rem;
+    margin-block-end: var(--space20);
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     column-gap: 2.1875rem;
+    border: 1px solid red;
 }
 
 .service__list>* {
@@ -456,6 +461,14 @@ nav .header__nav__links {
     padding: 1.25rem;
     background: var(--blue-variant-color);
     border-radius: 1rem;
+}
+
+.frontend .service__icon {
+    background: var(--green-color)
+}
+
+.backend .service__icon {
+    background: var(--red-variant-color);
 }
 
 .service__icon img {
@@ -493,6 +506,25 @@ nav .header__nav__links {
 .service .btn:hover {
     color: var(--light-color);
     background: var(--blue-variant-color);
+}
+
+.feature_list {
+    margin-block-start: -3.125rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    column-gap: 1.25rem;
+}
+
+.feature {
+    flex-basis: 100%;
+}
+
+.feature__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1.5rem;
 }
 
 footer {
@@ -557,3 +589,9 @@ footer {
     text-decoration: none;
 }
 
+@media only screen and (min-width: 768px) {
+    .feature {
+        flex-basis: calc(50% - 1.25rem);
+    }
+
+}
