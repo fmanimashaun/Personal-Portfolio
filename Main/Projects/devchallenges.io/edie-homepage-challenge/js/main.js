@@ -4,6 +4,7 @@
 const menuButton = document.querySelector('.nav__menu');
 const closeButton = document.querySelector('.close__icon');
 const mobileMenu = document.querySelector('.mobile__menu');
+const serviceCard = document.querySelector('.service');
 const bodyWidth = window.innerWidth;
 
 
@@ -17,6 +18,7 @@ menuButton.addEventListener('click', function () {
 closeButton.addEventListener('click', function () {
     mobileMenu.style.display = 'none';
 });
+
 
 /*
 //restore the menu when the window is resized

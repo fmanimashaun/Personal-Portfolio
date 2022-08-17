@@ -22,9 +22,9 @@
     </ul>
   </div>
   <div class="container">
-    <header>
+    <header class="container__wrapper">
       <span class="logo">Edie</span>
-      <nav>
+      <nav class="header__nav">
         <ul class="header__nav__links">
           <li><a href="#">Home</a></li>
           <li><a href="#">Services</a></li>
@@ -38,7 +38,7 @@
       </div>
     </header>
     <main>
-      <section class="hero">
+      <section class="hero container__wrapper">
         <div class="hero__text">
           <p class="hero__text__extra">
             Unhappy with your website?
@@ -48,10 +48,12 @@
           </h2>
         </div>
         <div class="hero__img">
-          <img src="/img/image-asset.jpeg" alt="">
+          <img sizes="(min-width: 375px) 100vw, 389px"
+            srcset="img/heroImage-mobile.jpg 389w, img/heroImage-tablet.jpg 778w, img/heroImage-mini_laptop.jpg 1114w, img/heroImage-desktop.jpg 1332w"
+            src="img/heroImage-mobile.jpg" alt="hero image">
         </div>
       </section>
-      <section class="offers">
+      <section class="offers container__wrapper">
         <div class="offer">
           <div class="offer__content">
             <h2 class="offer__content__title">
@@ -76,48 +78,160 @@
           </form>
         </div>
       </section>
-      <section class="services">
-        <h3 class="service__title">
+      <section class="services container__wrapper">
+        <h3 class="services__title">
           We offer high demand services
         </h3>
-        <div class="service design"></div>
-        <div class="service frontend"></div>
-        <div class="service backend"></div>
+        <div class="service__list">
+          <div class="service design">
+            <div class="service__icon">
+              <img src="img/design.svg" alt="UI/UX design icon">
+            </div>
+            <h4 class="service_heading">UI/UX Design</h4>
+            <p class="service__content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis
+              turpis.
+            </p>
+            <button class="design_service btn">Get started</button>
+
+          </div>
+          <div class="service frontend">
+            <div class="service__icon">
+              <img src="img/code.svg" alt="fontend development icon">
+            </div>
+            <h4 class="service_heading">Front End</h4>
+            <p class="service__content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis
+              turpis.
+            </p>
+            <button class="frontend__service btn">Get started</button>
+          </div>
+          <div class="service backend">
+            <div class="service__icon">
+              <img src="img/backend.svg" alt="backend development icon">
+            </div>
+            <h4 class="service_heading">Back End</h4>
+            <p class="service__content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus ac nulla consequat aliquet id quis
+              turpis.
+            </p>
+            <button class="backend__service btn">Get started</button>
+          </div>
+        </div>
       </section>
+      <section class="features container__wrapper">
+        <h3 class="features__title">Good design means good business</h3>
+        <div class="feature_list">
+          <figure class="feature">
+            <img class="feature__img" src="img/smarthome.jpg" alt="Smart home dashboard">
+            <figcaption>
+              <p class="feature__category">Full stack application</p>
+              <h4 class="feature__title">Smart home dashboard</h4>
+            </figcaption>
+          </figure>
+          <figure class="feature feature__alt">
+            <img class="feature__img" src="img/onboard.png" alt="Smart home dashboard">
+            <figcaption>
+              <p class="feature__category">UX/UI design</p>
+              <h4 class="feature__title">Onboard application</h4>
+            </figcaption>
+          </figure>
+          <figure class="feature">
+            <img class="feature__img" src="img/booking.png" alt="Smart home dashboard">
+            <figcaption>
+              <p class="feature__category">Mobile application</p>
+              <h4 class="feature__title">Booking system</h4>
+            </figcaption>
+          </figure>
+          <figure class="feature feature__alt">
+            <img class="feature__img" src="img/juice-product.png" alt="Smart home dashboard">
+            <figcaption>
+              <p class="feature__category">Front End applicati on</p>
+              <h4 class="feature__title">Juice product homepage</h4>
+            </figcaption>
+          </figure>
+          <div class="feature__link">
+            <div class="feature__link__wrapper">
+              <a href="#">see more</a>
+              <img src="img/arrow.svg" alt="arrow icon">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="teams container__wrapper">
+        <div class="teams__intro">
+          <p class="teams__intro__extra">Meet the team</p>
+          <h3 class="teams__title">We are chilled and a laidback team</h3>
+          <p class="teams__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="teams__img">
+          <div class="team__img__one">
+            <img src="img/person3.png" alt="first team member">
+          </div>
+          <div class="team__img__12">
+            <div class="team__img__two">
+              <img src="img/person1.png" alt="second team member">
+            </div>
+            <div class="team__img__three">
+              <img src="img/person2.png" alt="third team member">
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <section class="testimonies">
+        <p class="testimony__content">
+          Fast and outstanding resutls. Edie understands their customer’s needs. They have a young and talented team.
+        </p>
+        <div class="testimony__author">
+          <img src="img/person4.png" alt="testimony author">
+          <div class="testimony__author__details">
+            <p class="testimony__author__name">
+              Carlos Tran
+            </p>
+            <p class="testimony__author__position">
+              The Decorate Gatsby
+            </p>
+          </div>
+
+
+        </div>
     </main>
     <footer>
-      <nav>
-        <ul class="footer__nav__links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Our Works</a></li>
-          <li><a href="#">Clients</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="social__media">
-        <div class="footer__logo">
-          <span class="logo">Edie</span>
-        </div>
-        <div class="social__media__links">
-          <a href="#"><img src="img/instagram.svg" alt="instagram icon"></a>
-          <a href="#"><img src="img/linkedin.svg" alt="linkedin icon"></a>
-          <a href="#"><img src="img/twitter.svg" alt="twitter icon"></a>
-        </div>
-      </div>
-      <form action="#">
-        <label class="footer__label" for="email_footer">Want us to contact you?</label>
-        <div class="footer__input__wrapper">
-          <div class="footer__submit__btn__wrapper">
-            <input type="submit" value="join">
+      <div class="footer__wrapper container__wrapper">
+        <nav>
+          <ul class="footer__nav__links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Our Works</a></li>
+            <li><a href="#">Clients</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="social__media">
+          <div class="footer__logo">
+            <span class="logo">Edie</span>
           </div>
-          <input type="email" name="email_footer" id="email_footer" placeholder="Email" required>
+          <div class="social__media__links">
+            <a href="#"><img src="img/instagram.svg" alt="instagram icon"></a>
+            <a href="#"><img src="img/linkedin.svg" alt="linkedin icon"></a>
+            <a href="#"><img src="img/twitter.svg" alt="twitter icon"></a>
+          </div>
         </div>
-      </form>
-      <p class="foot__note">
-        created by <a href="https://github.com/fmanimashaun" target="_blank"><strong>fmanimashaun</a></strong> -
-        devChallenges.io
-      </p>
+        <form action="#">
+          <label class="footer__label" for="email_footer">Want us to contact you?</label>
+          <div class="footer__input__wrapper">
+            <div class="footer__submit__btn__wrapper">
+              <input type="submit" value="join">
+            </div>
+            <input type="email" name="email_footer" id="email_footer" placeholder="Email" required>
+          </div>
+        </form>
+        <p class="foot__note">
+          created by <a href="https://github.com/fmanimashaun" target="_blank"><strong>fmanimashaun</a></strong> -
+          devChallenges.io
+        </p>
+      </div>
     </footer>
   </div>
   <script src="js/main.js"></script>
