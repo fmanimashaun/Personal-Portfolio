@@ -226,12 +226,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .close__icon {
     position: absolute;
-    z-index: 101;
+    z-index: 1001;
     right: 0.75rem;
     top: 0.75rem;
     width: 1.5rem;
