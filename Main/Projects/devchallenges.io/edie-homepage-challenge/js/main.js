@@ -10,7 +10,9 @@ const bodyWidth = window.innerWidth;
 
 //add event listener for menu button 
 menuButton.addEventListener('click', function () {
-    mobileMenu.style.display = 'block';
+    if (bodyWidth < 768) {
+        mobileMenu.style.display = 'block';
+    }
 });
 
 
