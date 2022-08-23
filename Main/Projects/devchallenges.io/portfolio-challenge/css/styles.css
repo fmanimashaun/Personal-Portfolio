@@ -1,3 +1,121 @@
-body {
-    background: red;
+/*import fonts*/
+/*Montserrat font*/
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format('TrueType');
 }
+
+/*Universal reset*/
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    background-color: inherit;
+    font-family: inherit;
+    color: inherit;
+    overflow-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+    outline: none;
+}
+
+/*modular Scale*/
+:root {
+
+    /*modular scale font-size*/
+
+
+    /*Custom modular spacing*/
+
+
+    /*custom font family*/
+    --ff-primary: 'Montserrat', sans-serif;
+
+    /*custom font weight*/
+    --fw-extrabold: 800;
+    --fw-medium: 500;
+    --fw-regular: 400;
+    --fw-light: 300;
+
+    /*custom font color*/
+    --dark-color: #000000;
+    --light-color: #ffffff;
+    --blue-variant-color: #2f80ed;
+    --gray-700-color: #4f4f4f;
+    --gray-600-color: #828282;
+    --gray-500-color: #bDbDbD;
+    --gray-400-color: #c4c4c4;
+    --gray-300-color: #f2f2f2;
+   
+}
+
+/*Universal styling*/
+body {
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+    background: var(--gray-300-color);
+    font-family: var(--ff-primary);
+    color: var(--gray-700-color);
+}
+
+/*creating a stack container*/
+.container {
+    border: 1px solid red;
+    width: 90%;
+    margin-inline: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Set default max-width for all first child of the container class*/
+.container>* {
+    max-width: 100%;
+}
+
+/*Make the main element centered vertically*/
+.container>main {
+    margin-block: auto;
+}
+
+.container> :first-child:not(main) {
+    margin-block-start: 0;
+}
+
+.container> :last-child:not(main) {
+    margin-block-end: 0;
+}
+
+.profile__details {
+    background: var(--light-color);
+    border-radius: 0.75rem;
+    padding: 1.4375rem;
+}
+
+.profile__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.foot__note {
+    text-align: center;
+    color: var(--gray-600-color);
+    font-weight: var(--fw-medium);
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+    margin-block-end: 1.9375rem;
+}
+
+.foot__note a {
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .profile__details {
+        display: flex;
+    }
+}
+    
