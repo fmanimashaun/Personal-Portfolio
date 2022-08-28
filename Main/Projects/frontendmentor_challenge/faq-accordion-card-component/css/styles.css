@@ -1,0 +1,184 @@
+/*import fonts*/
+/**/
+@font-face {
+    font-family: 'Heebo';
+    src: url("../fonts/Heebo/Heebo-VariableFont_wght.ttf") format('TrueType');
+}
+
+/*Universal Styling*/
+/*modular Scale*/
+:root {
+
+    /*modular scale font-size*/
+
+    /*Custom modular spacing*/
+
+
+    /*custom font family*/
+    --ff-primary: 'Poppins', sans-serif;
+    --ff-secondary: 'Heebo', sans-serif;
+
+    /*custom font weight*/
+    --fw-extrabold: 800;
+    --fw-medium: 500;
+    --fw-regular: 400;
+    --fw-light: 300;
+
+    /*custom font color*/
+
+}
+
+/*Universal styling*/
+body {
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #B068E9 0%, #6463E7 100%);
+}
+
+/*creating a stack container*/
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-block-start: 40px;
+}
+
+/*Set default max-width for all first child of the container class*/
+.container>* {
+    max-width: 100%;
+}
+
+/*Make the main element centered vertically*/
+.container>main {
+    margin-block: auto;
+}
+
+
+.container> :first-child:not(main) {
+    margin-block-start: 0;
+}
+
+.container> :last-child:not(main) {
+    margin-block-end: 0;
+}
+
+/*styling the main*/
+main {
+    padding-block-start: 108px;
+    padding-inline: 24px;
+}
+
+/*styling FAQ section*/
+.faq {
+    background: white;
+    box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
+    border-radius: 23px;
+    margin-block-end: 85px;
+    margin-inline: auto;
+    max-inline-size: 400px;
+}
+
+/*styling FAQ image wrapper*/
+.fag-img-wrapper {
+    position: relative;
+    max-inline-size: 237px;
+    margin-inline: auto;
+}
+
+/*styling FAQ images*/
+.faq-img {
+    position: absolute;
+    inset-block-start: -108px;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.faq-img-shadow {
+    position: absolute;
+    inset-block-start: 0px;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*styling FAQ content*/
+.fag-content-wrapper {
+    padding-block-start: 132px;
+    padding-inline: 25px;
+    padding-block-end: 48px;
+}
+
+
+.faq-accordion-wrapper>*+* {
+    border-block-start: 1px solid #E8E8EA;;
+    margin-block-start: 16px;
+    padding-block-start: 16px;
+}
+
+.faq-accordion-wrapper:last-child {
+    border-block-end: 1px solid #E8E8EA;;
+    padding-block-end: 16px;
+}
+
+.faq-content-header {
+    text-align: center;
+    margin-block: 0 38px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    color: #1E1F36;
+}
+
+.faq-accordion-header button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-accordion-header-text {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #4B4C5F;
+}
+
+
+.faq-accordion-header-indicator {
+    flex-basis: content;
+    flex-shrink: 0;
+}
+
+.faq-accordion-header-indicator img {
+    display: block;
+    width: 8px;
+    height: auto;
+}
+
+.faq-accordion-content-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #787887;
+}
+
+footer {
+    position: relative;
+}
+.attribution {
+    position: absolute;
+    inset-block-end: 0;
+    width: 100%;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
