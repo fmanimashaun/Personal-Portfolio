@@ -15,3 +15,7 @@
 .DS_Store
 
 .prettierignore
+
+# Avoid others folder and the design folder
+others/
+design/
