@@ -150,6 +150,11 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
+}
+
+.faq-accordion-header button:hover .faq-accordion-header-text {
+    color: #F47B56;
 }
 
 .faq-accordion-header-text {
@@ -157,6 +162,7 @@ main {
     font-size: 13px;
     line-height: 16px;
     color: #4B4C5F;
+
 }
 
 
@@ -171,13 +177,23 @@ main {
     height: auto;
 }
 
-.faq-accordion-content-text {
+.faq-accordion-content {
     display: none;
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
     color: #787887;
 }
+
+.faq-accordion.is-open .faq-accordion-content {
+    display: block;
+}
+
+.faq-accordion.is-open .faq-accordion-header-text {
+    font-weight: 700;
+}
+
+
 
 footer {
     position: relative;
