@@ -6,7 +6,7 @@ accordions.forEach(accordion => {
     const accordionHeader = accordion.querySelector('.faq-accordion-header')
 
     // Add event listener to the accordion header
-    accordionHeader.addEventListener('click', function () {
+    accordionHeader.addEventListener('click', function() {
         // Toggle the is-open class
         accordion.classList.toggle('is-open')
     })
