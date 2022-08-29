@@ -175,6 +175,7 @@ main {
     display: block;
     width: 8px;
     height: auto;
+    transform: rotate(0deg);
 }
 
 .faq-accordion-content {
@@ -191,6 +192,10 @@ main {
 
 .faq-accordion.is-open .faq-accordion-header-text {
     font-weight: 700;
+}
+
+.faq-accordion.is-open .faq-accordion-header-indicator img {
+    transform: rotate(180deg);
 }
 
 
