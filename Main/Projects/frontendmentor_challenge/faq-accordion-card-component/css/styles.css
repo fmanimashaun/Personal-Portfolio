@@ -112,13 +112,15 @@ main {
 
 
 .faq-accordion-wrapper>*+* {
-    border-block-start: 1px solid #E8E8EA;;
+    border-block-start: 1px solid #E8E8EA;
+    ;
     margin-block-start: 16px;
     padding-block-start: 16px;
 }
 
 .faq-accordion-wrapper:last-child {
-    border-block-end: 1px solid #E8E8EA;;
+    border-block-end: 1px solid #E8E8EA;
+    ;
     padding-block-end: 16px;
 }
 
@@ -171,6 +173,7 @@ main {
 footer {
     position: relative;
 }
+
 .attribution {
     position: absolute;
     inset-block-end: 0;
@@ -181,4 +184,50 @@ footer {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 800px) {
+    .faq {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        max-inline-size: 920px;
+    }
+
+    .faq>* {
+        flex-basis: 50%;
+    }
+
+    /*styling FAQ image wrapper*/
+    .fag-img-wrapper {
+        position: static;
+        max-inline-size: 237px;
+        margin-inline: 0;
+        border: 1px solid red;
+    }
+
+    /*styling FAQ images*/
+    .faq-img {
+        position: static;
+        inset-block-start: 0px;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .faq-img-shadow {
+        position: absolute;
+        inset-block-start: 0px;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .fag-content-wrapper {
+        padding-block-start: 65px;
+    }
+
+    .fag-content-wrapper>* {
+        max-inline-size: 350px;
+    }
 }
