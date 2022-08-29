@@ -80,6 +80,14 @@ main {
 }
 
 /*styling FAQ image wrapper*/
+.desktop {
+    display: none;
+}
+
+.mobile {
+    display: block;
+}
+
 .fag-img-wrapper {
     position: relative;
     max-inline-size: 237px;
@@ -197,6 +205,14 @@ footer {
 
     .faq>* {
         flex-basis: 50%;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
     }
 
     /*styling FAQ image wrapper*/
