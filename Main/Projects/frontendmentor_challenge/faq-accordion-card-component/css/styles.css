@@ -38,6 +38,7 @@ body {
 
 /*creating a stack container*/
 .container {
+    position: relative;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -51,6 +52,7 @@ body {
 /*Make the main element centered vertically*/
 .container>main {
     margin-block: auto;
+    padding-inline: 24px;
 }
 
 
@@ -63,18 +65,18 @@ body {
 }
 
 /*styling the main*/
-main {
-    padding-block-start: 108px;
-    padding-inline: 24px;
+.faq {
+    margin-inline: auto;
+    margin-block: clamp(9.25rem, -4.9545rem + 60.6061vw, 14.25rem) 85px;
+    max-width: 460px;
 }
 
 /*styling FAQ section*/
-.faq {
+.faq-wrapper {
+    position: relative;
     background: white;
     box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
     border-radius: 23px;
-    margin-inline: auto;
-    max-inline-size: 400px;
 }
 
 /*styling FAQ image wrapper*/
@@ -83,27 +85,39 @@ main {
 }
 
 .mobile {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: auto;
     display: block;
-}
-
-.fag-img-wrapper {
-    position: relative;
-    max-inline-size: 237px;
-    margin-inline: auto;
+    transform: translateY(-60%);
 }
 
 /*styling FAQ images*/
+.fag-img-wrapper {
+    position: relative;
+    margin-inline: 45px;
+}
+
+.fag-main-img {
+    width: 100%;
+}
+
 .faq-img {
-    position: absolute;
-    inset-block-start: -108px;
     display: block;
     width: 100%;
     height: auto;
 }
 
-.faq-img-shadow {
+.fag-main-img-shadow {
     position: absolute;
-    inset-block-start: 0px;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    transform: translateY(30%);
+}
+
+.faq-img-shadow {
     display: block;
     width: 100%;
     height: auto;
@@ -111,7 +125,7 @@ main {
 
 /*styling FAQ content*/
 .fag-content-wrapper {
-    padding-block-start: 132px;
+    padding-block-start:  clamp(8.25rem, -0.0952rem + 35.6061vw, 11.1875rem);
     padding-inline: 25px;
     padding-block-end: 48px;
 }
@@ -199,7 +213,6 @@ main {
 
 
 .attribution {
-    inset-block-end: 0;
     width: 100%;
     font-size: 11px;
     text-align: center;
@@ -227,6 +240,17 @@ main {
 
     .desktop {
         display: block;
+        position: relative;
+    }
+
+    .faq-img-desktop-shadow {
+        display: block;
+        position: absolute;
+        inset-block-start: 0px;
+        inset-block-end: 0px;
+        width: 100%;
+        height: auto;
+        border: 1px solid black;
     }
 
     .mobile {
@@ -237,16 +261,17 @@ main {
     .fag-img-wrapper {
         position: relative;
         margin-inline: 0;
-        max-inline-size: unset;
     }
 
     /*styling FAQ images*/
     .faq-img-desktop-wrapper {
-        overflow-x: hidden;
+        position: relative;
+        border: 1px solid black;
+        overflow: hidden;
     }
+
     .faq-img {
         position: relative;
-        inset-inline-start: -93px;
         inset-block-start: 0px;
         width: 100%;
         height: auto;
@@ -255,16 +280,18 @@ main {
     .faq-img-shadow {
         position: absolute;
         inset-block-start: 0px;
-        inset-inline-start: -93px;
         display: block;
         width: 100%;
         height: auto;
     }
 
     .faq-img-box {
-        position: absolute;
-        inset-block-start: calc(100%/2 - 53px);
-        inset-inline-start: -93px;
+        position: relative;
+        z-index: 10;
+        border: 1px solid red;
+        display: block;
+        width: 100%;
+        height: auto;
     }
 
     .fag-content-wrapper {
