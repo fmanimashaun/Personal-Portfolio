@@ -74,6 +74,7 @@ body {
 /*styling FAQ section*/
 .faq-wrapper {
     position: relative;
+    width: 100%;
     background: white;
     box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
     border-radius: 23px;
@@ -94,22 +95,23 @@ body {
 }
 
 /*styling FAQ images*/
-.fag-img-wrapper {
+.fag-img-mobile-wrapper {
     position: relative;
     margin-inline: 45px;
 }
 
-.fag-main-img {
+.fag-main-mobile-img {
     width: 100%;
 }
 
-.faq-img {
+faq-img-mobile,
+.faq-img-mobile-shadow {
     display: block;
     width: 100%;
     height: auto;
 }
 
-.fag-main-img-shadow {
+.fag-main-img-mobile-shadow {
     position: absolute;
     width: 100%;
     height: auto;
@@ -117,15 +119,11 @@ body {
     transform: translateY(30%);
 }
 
-.faq-img-shadow {
-    display: block;
-    width: 100%;
-    height: auto;
-}
+
 
 /*styling FAQ content*/
 .fag-content-wrapper {
-    padding-block-start:  clamp(8.25rem, -0.0952rem + 35.6061vw, 11.1875rem);
+    padding-block-start: clamp(8.25rem, -0.0952rem + 35.6061vw, 11.1875rem);
     padding-inline: 25px;
     padding-block-end: 48px;
 }
@@ -223,86 +221,56 @@ body {
 }
 
 @media only screen and (min-width: 800px) {
-    main {
-        padding-block-start: 0px;
-        padding-inline: 66px;
+    .faq {
+        max-width: 920px;
     }
 
-
-    .faq {
+    .faq-wrapper {
+        padding-block-start: clamp(2.25rem, -0.0156rem + 4.5313vw, 4.0625rem);
+        padding-block-end: clamp(2.875rem, -0.0938rem + 5.9375vw, 5.25rem);
         display: grid;
         grid-auto-flow: column;
         grid-auto-columns: 1fr;
-        place-items: center;
-        max-inline-size: 920px;
-    }
-
-
-    .desktop {
-        display: block;
-        position: relative;
-    }
-
-    .faq-img-desktop-shadow {
-        display: block;
-        position: absolute;
-        inset-block-start: 0px;
-        inset-block-end: 0px;
-        width: 100%;
-        height: auto;
-        border: 1px solid black;
     }
 
     .mobile {
         display: none;
     }
 
-    /*styling FAQ image wrapper*/
-    .fag-img-wrapper {
+    .desktop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         position: relative;
-        margin-inline: 0;
-    }
-
-    /*styling FAQ images*/
-    .faq-img-desktop-wrapper {
-        position: relative;
-        border: 1px solid black;
-        overflow: hidden;
-    }
-
-    .faq-img {
-        position: relative;
-        inset-block-start: 0px;
-        width: 100%;
-        height: auto;
-    }
-
-    .faq-img-shadow {
-        position: absolute;
-        inset-block-start: 0px;
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-
-    .faq-img-box {
-        position: relative;
-        z-index: 10;
+        left: clamp(-2.875rem, 0.0938rem + -5.9375vw, -5.25rem);
         border: 1px solid red;
+    }
+
+    .fag-main-desktop-img {
+        border: 1px solid yellow;
+    }
+
+    .fag-main-img-desktop-shadow {
+        position: absolute;
+        border: 1px solid black;
+        width: 100%;
+        height: clamp(32.75rem, -0.0625rem + 65.625vw, 59rem);
+        top: -216px;
+    }
+
+    .faq-img-desktop-shadow {
         display: block;
         width: 100%;
-        height: auto;
+        height: 100%;
+        border: 1px solid green;
     }
 
-    .fag-content-wrapper {
-        padding-block-start: 65px;
-        max-inline-size: 350px;
-    }
+  /*styling FAQ content*/
+  .fag-content-wrapper {
+      padding-block-start: 0;
+      padding-inline: 0 clamp(3.25rem, -0.1094rem + 6.7188vw, 5.9375rem);
+      padding-block-end: 48px;
+  }
 
 
-    .faq-accordion-header-text {
-        font-size: 14px;
-        line-height: 17px;
-
-    }
 }
