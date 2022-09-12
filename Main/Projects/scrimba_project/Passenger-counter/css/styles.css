@@ -37,6 +37,7 @@ body::before {
 /*Make the main element centered vertically*/
 .container>main {
     margin-block: auto;
+    padding: 10px;
 }
 
 .container> :first-child:not(main) {
@@ -47,7 +48,7 @@ body::before {
     margin-block-end: 0;
 }
 
-.counter {
+.counter-wrapper, .btn {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,14 +58,66 @@ body::before {
 }
 
 
+.counter-head, .count {
+    font-size: 30px;
+}
+
+.count {
+    font-size: 50px;
+}
+
+.counter-wrapper > * + * {
+    margin-block-start: 1rem;
+}
+
+.btn {
+    row-gap: 0.2rem;
+}
+
+.counter, .save {
+    width: 200px;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow:2px 2px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.counter {
+    background: darkred;
+}
+
+.save {
+    background: darkgreen;
+}
+
+.counter:active, .save:active {
+    box-shadow: none;
+}
+
+.previous {
+    font-size: 20px;
+    font-weight: bold;
+}
 
 .foot__note {
     text-align: center;
     font-size: 0.875rem;
     line-height: 1.0625rem;
     margin-block-end: 1.9375rem;
+    color:#222222;
 }
 
 .foot__note a {
     text-decoration: none;
+    color: #222222;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .btn {
+        flex-direction: row;
+        column-gap: 0.5rem;
+    }
 }
