@@ -1,0 +1,70 @@
+/*Universal styling*/
+body {
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url(../img/brt.webp);
+    /*Put your image url*/
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    /*Value from 0.0 to 1.0*/
+}
+
+/*creating a stack container*/
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+/*Set default max-width for all first child of the container class*/
+.container>* {
+    max-width: 100%;
+}
+
+/*Make the main element centered vertically*/
+.container>main {
+    margin-block: auto;
+}
+
+.container> :first-child:not(main) {
+    margin-block-start: 0;
+}
+
+.container> :last-child:not(main) {
+    margin-block-end: 0;
+}
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.foot__note {
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+    margin-block-end: 1.9375rem;
+}
+
+.foot__note a {
+    text-decoration: none;
+}
