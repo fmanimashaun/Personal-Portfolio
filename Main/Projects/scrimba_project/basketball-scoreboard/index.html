@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <title>Passenger Counter App</title>
+    <title>Basketball Scoreboard</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/styles.css" />
@@ -15,14 +15,34 @@
 <body>
     <div class="container">
         <main>
-            <div class="counter-wrapper">
-                <h1 class="counter-head">People entered:</h1>
-                <h2 class="count">0</h2>
-                <div class="btn">
-                    <button class="counter">INCREMENT</button>
-                    <button class="save">SAVE</button>
+            <div class="scoreboard">
+                <h1 class="timer">30:00</h1>
+                <div class="scoreboard-wrapper">
+                    <div class="home_team">
+                        <h2 class="header">HOME</h2>
+                        <div class="score">
+                            <h3 id="score_home">0</h3>
+                        </div>
+
+                        <div class="scoring_btn">
+                            <button>+1</button>
+                            <button>+2</button>
+                            <button>+3</button>
+                        </div>
+                    </div>
+                    <div class="guest_team">
+                        <h2 class="header">GUEST</h2>
+                        <div class="score">
+                            <h3 id="score_guest">0</h3>
+                        </div>
+                        <div class="scoring_btn">
+                            <button>+1</button>
+                            <button>+2</button>
+                            <button>+3</button>
+                        </div>
+                    </div>
                 </div>
-                <p class="previous">Previous entries: </p>
+                <button class="reset">START NEW GAME</button>
             </div>
         </main>
         <footer>
