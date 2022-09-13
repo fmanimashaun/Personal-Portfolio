@@ -1,26 +1,3 @@
-// get all needed variables
-
-const countDisplay = document.querySelector(".count")
-const incrementBtn = document.querySelector(".counter")
-const saveBtn = document.querySelector(".save")
-const savePrevious = document.querySelector(".previous")
-
-let count = 0
-console.log(countDisplay)
-console.log(incrementBtn)
-console.log(saveBtn)
-
-// add event listeners for Increment button
-incrementBtn.addEventListener("click", () => {
-    count++
-    countDisplay.textContent = count
-})
-
-
-// add event listeners for save button
-saveBtn.addEventListener("click", () => {
-    let countString = ` ${count} - `
-    savePrevious.innerText += countString
-    count = 0
-    countDisplay.innerText = count
-})
+// Create a timer that runs from 0 to 12 minutes
+// at the end of the timer, score of the highest should be blinking with a color change to green
+// if the score is same, the color should be yellow for both team and the score should blink

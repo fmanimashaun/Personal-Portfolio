@@ -1,3 +1,20 @@
+/*import fonts*/
+
+/*“Cursed Timer ULiL” Font by heaven castro*/
+@font-face {
+    font-family: 'Cursed Timer ULiL';
+    src: url("../fonts/cursed-timer-ulil-font/CursedTimerUlil-Aznm.ttf") format('TrueType');
+    font-weight: 400;
+}
+
+
+@font-face {
+    font-family: Verdana;
+    src: url("../fonts/verdana-font-family/verdana-bold.ttf") format('TrueType');
+    font-weight: bold;
+}
+
+
 /*Universal styling*/
 body {
     max-width: 100vw;
@@ -58,8 +75,17 @@ body::before {
     background: rgba(27, 36, 74, 0.9);
 }
 
-.scoreboard > * + * {
-    margin-block-start: 1rem;
+
+.timer {
+    width: fit-content;
+    background-color: #222222;
+    margin-inline: auto;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-family: 'Cursed Timer ULiL';
+    font-weight: 400;
+    font-size: 50px;
+    color: #F94F6D;
 }
 
 .scoreboard-wrapper {
@@ -73,7 +99,7 @@ body::before {
 
 .header {
     margin-block: 10px;
-    font-family: 'Verdana';
+    font-family: Verdana,sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -98,6 +124,21 @@ body::before {
 
 
 .scoring_btn button {
+    font-family: 'Cursed Timer ULiL';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #9AABD8;
+    border: 1px solid #9AABD8;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+.reset {
+    margin-block-start: 20px;
     font-family: 'Cursed Timer ULiL';
     font-weight: 400;
     font-size: 18px;
