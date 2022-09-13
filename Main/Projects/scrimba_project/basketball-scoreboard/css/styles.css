@@ -110,6 +110,7 @@ body::before {
 .score {
     background-color: #222222;
     margin-inline: 10px;
+    border-radius: 20px;
 }
 
 #score_home,
