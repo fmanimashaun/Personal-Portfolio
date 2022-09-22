@@ -82,11 +82,15 @@ body::before {
     margin-inline: auto;
     padding: 10px 30px;
     border-radius: 20px;
+}
+
+.timer-content {
     font-family: 'Cursed Timer ULiL';
     font-weight: 400;
     font-size: 50px;
     color: #F94F6D;
 }
+
 
 .scoreboard-wrapper {
     display: flex;
@@ -99,7 +103,7 @@ body::before {
 
 .header {
     margin-block: 10px;
-    font-family: Verdana,sans-serif;
+    font-family: Verdana, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -150,6 +154,28 @@ body::before {
     padding: 10px 20px;
     margin: 10px;
     cursor: pointer;
+}
+
+.timer-content.blink {
+    animation: blink 1s linear infinite;
+}
+
+#score_home.textRight {
+    text-align: right;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 
