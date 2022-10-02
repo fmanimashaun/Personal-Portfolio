@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./Resources/css/reset.css">
+  <title>FM Workflows</title>
+  <!-- Material Icon CDN -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet">
+      <!--Awesome fone-->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      <!--Stylesheet-->
+  <link rel="stylesheet" href="./main.css">
+  
+</head>
+<body>
+  <div class="container">
+    <aside>
+      <div class="top">
+        <div class="logo">
+          <img src="./image/Logo_3-removebg-preview.png" alt="FM Workflows logo">
+          <h2><span class="danger">WORKFLOWS</span></h2>
+        </div>
+        <div class="close" id="close-btn">
+          <span class="material-icons-sharp">close</span>
+        </div>
+      </div>
+      <div class="sidebar">
+        <a href="#" class="active">
+          <span class="material-icons-sharp">grid_view</span>
+          <h3>Dashboard</h3>  
+        </a>
+        <a href="#">
+          <span class="material-icons-sharp">mail_outline</span>
+          <h3>Messages</h3>
+          <span class="message-count">10</span>
+        </a>
+        <a href="#">
+          <span class="material-icons-sharp">build</span>
+          <h3>Service Requests</h3> 
+        </a>
+        <a href="#">
+          <span class="material-icons-sharp">work</span>
+          <h3>Work Orders</h3> 
+        </a>
+        <a href="#">
+          <span class="material-icons-sharp">explore</span>
+          <h3>Facility/Location</h3> 
+        </a>
+        <a href="#">
+          <span class="material-icons-sharp">receipt_long</span>
+          <h3>Asset register</h3> 
+        </a>
+        <a href="#">
+          <span class="material-icons-sharp">inventory</span>
+          <h3>Inventory</h3> 
+        </a>
+        <a href="#">
+          <span class="material-icons-sharp">leaderboard</span>
+          <h3>Reports</h3>
+        </a>
+        <a href="#">
+          <span class="material-icons-sharp">manage_accounts</span>
+          <h3>Profile</h3>  
+        </a>
+        <a href="#">
+          <span class="material-icons-sharp">settings</span>
+          <h3>Settings</h3>  
+        </a>
+        <a href="#">
+          <span class="material-icons-sharp">logout</span>
+          <h3>Logout</h3>  
+        </a>
+      </div>
+    </aside>
+
+    <!-- BEGINNING OF MAIN-->
+    <main>
+      <h1>Dashboard</h1>
+      <div class="date">
+        <input type="date">
+      </div>
+
+      <!--BEGINNING OF INSIGHT-->
+      <div class="insight">
+        <div class="servive-request">
+          <span class="material-icons-sharp">construction</span>
+          <div class="middle">
+            <div class="left">
+              <h3>Service Requests</h3>
+              <h1>200</h1>
+            </div>
+            <div class="progress">
+              <svg>
+                <circle cx="38", cy="38", r="36"></circle>
+              </svg>
+              <div class="number">
+                <p>78%</p>
+              </div>
+            </div>
+          </div>
+          <small class="text-muted">Last 24 hours</small>
+        </div>
+        <!----END OF SERVICE REQUEST-->
+        <div class="reactive-maintenance">
+          <span class="material-icons-sharp">miscellaneous_services</span>
+          <div class="middle">
+            <div class="left">
+              <h3>Reactive Maintenance</h3>
+              <h1>250</h1>
+            </div>
+            <div class="progress">
+              <svg>
+                <circle cx="38", cy="38", r="36"></circle>
+              </svg>
+              <div class="number">
+                <p>80%</p>
+              </div>
+            </div>
+          </div>
+          <small class="text-muted">Last 24 hours</small>
+        </div>
+        <!----END OF REACTIVE MAINTENANCE-->
+        <div class="planned-maintenance">
+          <span class="material-icons-sharp">engineering</span>
+          <div class="middle">
+            <div class="left">
+              <h3>Planned Maintenance</h3>
+              <h1>1000</h1>
+            </div>
+            <div class="progress">
+              <svg>
+                <circle cx="38", cy="38", r="36"></circle>
+              </svg>
+              <div class="number">
+                <p>50%</p>
+              </div>
+            </div>
+          </div>
+          <small class="text-muted">Last 24 hours</small>
+        </div>
+        <!----END OF PLANNED MAINTENANCE-->
+      </div>
+      <!--END OF INSIGHT-->
+
+      <div class="open-work-orders">
+        <h2>Work Orders</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>WO ID</th>
+              <th>Issue Category</th>
+              <th>Description</th>
+              <th>Assigned Technician/Vendor</th>
+              <th>Due Date</th>
+              <th>Priority</th>
+              <th>Work Type</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>27/04/2022</td>
+              <td>WO00001</td>
+              <td>AC</td>
+              <td>not cooling</td>
+              <td>Adams Boye</td>
+              <td>29/04/2022</td>
+              <td>2</td>
+              <td>Repair</td>
+              <td class="warning">Pending</td>
+              <td class="primary">Details</td>
+            </tr>
+            <tr>
+              <td>27/04/2022</td>
+              <td>WO00002</td>
+              <td>AC</td>
+              <td>not cooling</td>
+              <td>Adams Boye</td>
+              <td>29/04/2022</td>
+              <td>2</td>
+              <td>Repair</td>
+              <td class="warning">Pending</td>
+              <td class="primary">Details</td>
+            </tr>
+            <tr>
+              <td>27/04/2022</td>
+              <td>WO00003</td>
+              <td>AC</td>
+              <td>not cooling</td>
+              <td>Adams Boye</td>
+              <td>29/04/2022</td>
+              <td>1</td>
+              <td>Repair</td>
+              <td class="warning">Pending</td>
+              <td class="primary">Details</td>
+            </tr>
+            <tr>
+              <td>27/04/2022</td>
+              <td>WO00004</td>
+              <td>AC</td>
+              <td>not cooling</td>
+              <td>Adams Boye</td>
+              <td>29/04/2022</td>
+              <td>3</td>
+              <td>Repair</td>
+              <td class="warning">Pending</td>
+              <td class="primary">Details</td>
+            </tr>
+            <tr>
+              <td>27/04/2022</td>
+              <td>WO00005</td>
+              <td>AC</td>
+              <td>not cooling</td>
+              <td>Adams Boye</td>
+              <td>29/04/2022</td>
+              <td>2</td>
+              <td>Repair</td>
+              <td class="warning">Pending</td>
+              <td class="primary">Details</td>
+            </tr>
+            <tr>
+              <td>27/04/2022</td>
+              <td>WO00006</td>
+              <td>AC</td>
+              <td>not cooling</td>
+              <td>Adams Boye</td>
+              <td>29/04/2022</td>
+              <td>2</td>
+              <td>Repair</td>
+              <td class="warning">Pending</td>
+              <td class="primary">Details</td>
+            </tr>
+            <tr>
+              <td>27/04/2022</td>
+              <td>WO00007</td>
+              <td>AC</td>
+              <td>not cooling</td>
+              <td>Adams Boye</td>
+              <td>29/04/2022</td>
+              <td>1</td>
+              <td>Repair</td>
+              <td class="warning">Pending</td>
+              <td class="primary">Details</td>
+            </tr>
+            <tr>
+              <td>27/04/2022</td>
+              <td>WO00008</td>
+              <td>AC</td>
+              <td>Tnot cooling</td>
+              <td>Adams Boye</td>
+              <td>29/04/2022</td>
+              <td>1</td>
+              <td>Repair</td>
+              <td class="warning">Pending</td>
+              <td class="primary">Details</td>
+            </tr>
+            <tr>
+              <td>27/04/2022</td>
+              <td>WO00009</td>
+              <td>AC</td>
+              <td>not cooling</td>
+              <td>Adams Boye</td>
+              <td>29/04/2022</td>
+              <td>3</td>
+              <td>Repair</td>
+              <td class="warning">Pending</td>
+              <td class="primary">Details</td>
+            </tr>
+          </tbody>
+        </table>
+        <a href="">Show All</a>
+      </div>
+    </main>
+    <!--END OF MAIN-->
+
+    <div class="right">
+      <div class="top">
+        <button id="menu-btn">
+          <span class="material-icons-sharp">menu</span>
+        </button>
+        <div class="theme-toggler">
+          <span class="material-icons-sharp active">light_mode</span>
+          <span class="material-icons-sharp">dark_mode</span>
+        </div>
+        <div class="profile">
+          <div class="info">
+            <p>Hey, <b>Fisayo</b></p>
+           <small class="text-muted">Admin</small>
+          </div>
+          <div class="profile-photo">
+            <img src="./image/profile image 1.jpg" alt="profile-image">
+          </div>
+        </div>
+      </div>
+      <!--END OF TOP-->
+      <div class="recent-updates">
+        <h2>Recent Updates</h2>
+        <div class="updates">
+          <div class="update">
+            <div class="profile-photo">
+              <img src="/image/profile image 1.jpg" alt="profile-image">
+            </div>
+            <div class="message">
+              <p><b>Fisayo</b> Service Request created for AAAA</p>
+              <small class="text-muted">23 Minutes Ago</small>
+            </div>
+          </div>
+          <div class="update">
+            <div class="profile-photo">
+              <img src="/image/profile image 1.jpg" alt="profile-image">
+            </div>
+            <div class="message">
+              <p><b>Fisayo</b> Service Request created for BBBB</p>
+              <small class="text-muted">12 Minutes Ago</small>
+            </div>
+          </div>
+          <div class="update">
+            <div class="profile-photo">
+              <img src="/image/profile image 1.jpg" alt="profile-image">
+            </div>
+            <div class="message">
+              <p><b>Fisayo</b> Service Request created for CCCC</p>
+              <small class="text-muted">2 Minutes Ago</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End OF RECENT UPDATE-->
+      <div class="energy-analytics">
+        <h2>Energy Usage</h2>
+        <div class="energy-category phcn">
+          <div class="icon">
+            <span class="material-icons-sharp">electric_bolt</span>
+          </div>
+          <div class="right">
+            <div class="info">
+              <h3>PHCN(KWH)</h3>
+              <small class="text-muted">Last 24 hours</small>
+            </div>
+            <h5 class="success">+10%</h5>
+            <h3>2300</h3>
+          </div>
+        </div>
+
+        <div class="energy-category generator">
+          <div class="icon">
+            <span class="material-icons-sharp">wind_power</span>
+          </div>
+          <div class="right">
+            <div class="info">
+              <h3>GEN(HRS.)</h3>
+              <small class="text-muted">Last 24 hours</small>
+            </div>
+            <h5 class="success">+10%</h5>
+            <h3>220</h3>
+          </div>
+        </div>
+        <div class="energy-category diesel">
+          <div class="icon">
+            <span class="material-icons-sharp">gas_meter</span>
+          </div>
+          <div class="right">
+            <div class="info">
+              <h3>DIESEL(Ltr.)</h3>
+              <small class="text-muted">Last 24 hours</small>
+            </div>
+            <h5 class="success">+10%</h5>
+            <h3>230</h3>
+          </div>
+        </div>
+        <div class="energy-category add-energy-source">
+          <span class="material-icons-sharp">add</span>
+          <h3>Add Energy Source</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <script src="./index.js"></script>
+</body>
+</html>
