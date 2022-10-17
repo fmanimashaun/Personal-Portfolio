@@ -221,7 +221,7 @@ faq-img-mobile,
     color: hsl(228, 45%, 44%);
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 768px) {
     .faq {
         max-width: 920px;
         margin-block: auto;
