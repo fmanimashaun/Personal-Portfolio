@@ -1,0 +1,48 @@
+/* Styling reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+
+ul {
+  list-style: none;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  max-width: 100vw;
+  margin: 0;
+}
+
+#aside {
+  position: fixed;
+  width: 20%;
+  top: 0;
+  bottom: 0;
+  border: 1px solid red;
+}
+
+#main-doc {
+  width: 80%;
+  margin-left: auto;
+}
+
+#main-doc ul {
+  list-style:unset
+}
+
+@media only screen and (min-width: 768px) {
+  #main-doc {
+    width: 80%;
+  }
+
+  #aside {
+    width: 20%;
+  }
+}
