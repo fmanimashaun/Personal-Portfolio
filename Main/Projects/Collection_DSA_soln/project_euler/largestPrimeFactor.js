@@ -20,4 +20,4 @@ const largestPrimeFactor = (n) => {
 let startTime = performance.now();
 console.log(largestPrimeFactor(600851475143));
 let endTime = performance.now();
-console.log(`Call to doSomething took ${endTime - startTime} milliseconds`)
+console.log(`Function ran for ${endTime - startTime} milliseconds`);

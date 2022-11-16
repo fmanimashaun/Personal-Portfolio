@@ -32,4 +32,7 @@ const diffSquareSums = (n) => {
   return diff;
 }
 
+let startTime = performance.now();
 console.log(diffSquareSums(100));
+let endTime = performance.now();
+console.log(`Function ran for ${endTime - startTime} milliseconds`)

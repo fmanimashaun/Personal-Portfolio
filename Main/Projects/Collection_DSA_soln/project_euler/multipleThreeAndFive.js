@@ -17,4 +17,7 @@ const multThreeAndFive = (n) => {
 }
 
 // testing function
+let startTime = performance.now();
 console.log(multThreeAndFive(1000));
+let endTime = performance.now();
+console.log(`Function ran for ${endTime - startTime} milliseconds`)

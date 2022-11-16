@@ -40,4 +40,7 @@ function sumOfEvenFib (n) {
 }
 
 // Checking function
+let startTime = performance.now();
 console.log(sumOfEvenFib(4000000));
+let endTime = performance.now();
+console.log(`Function ran for ${endTime - startTime} milliseconds`);
