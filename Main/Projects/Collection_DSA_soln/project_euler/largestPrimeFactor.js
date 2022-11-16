@@ -5,17 +5,19 @@
 const largestPrimeFactor = (n) => {
   let lastFactor = 0;
   let x = 2;
-  let quotient = n;
 
-  while (quotient > 1) {
-    if (quotient % x === 0) {
+  while (n > Math.sqrt(n)) {
+    if (n % x === 0) {
       lastFactor = x;
-      quotient = quotient / x;
-    } else if (x < quotient) {
+      n = n / x;
+    } else {
       x++;
     }
   }
   return lastFactor;
 }
 
+let startTime = performance.now();
 console.log(largestPrimeFactor(600851475143));
+let endTime = performance.now();
+console.log(`Call to doSomething took ${endTime - startTime} milliseconds`)
