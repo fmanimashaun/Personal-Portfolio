@@ -99,7 +99,7 @@ body {
 }
 
 
-.price-left {
+.price-new {
     font-family: 'Fraunces', serif;
     font-weight: 700;
     font-size: 2rem;
@@ -108,14 +108,25 @@ body {
     margin-right: 1.5rem;
 }
 
-.price-right {
+.price-old {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 13px;
     line-height: 177%;
-    text-decoration-line: line-through;
     color: #6C7289;
 
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .cart-btn {
