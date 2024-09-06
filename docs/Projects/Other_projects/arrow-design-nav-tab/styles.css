@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    background-color: blue;
+    width: 150px;
+    height: 50px;
+    position: relative;
+    margin-right: 100px;
+}
+
+.btn::after {
+    position: absolute;
+    content: "";
+    border-width: 25px 25px;
+    border-color: transparent;
+    border-left-color: black;
+    border-style: solid;
+    left: 100%;
+}
+
+.btn::before {
+    position: absolute;
+    content: "";
+    border-width: 25px 25px;
+    border-color: transparent;
+    border-top-color: black;
+    border-bottom-color: black;
+    border-right-color: black;
+    border-style: solid;
+    left: -50px;
+}
